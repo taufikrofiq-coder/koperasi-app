@@ -1,0 +1,1167 @@
+/* adminHome.css - Mobile Banking Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding-bottom: 70px;
+}
+
+/* Mobile Header Styles */
+.mobile-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.menu-toggle {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.notification-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.user-avatar {
+    font-size: 3rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.user-greeting h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.user-greeting p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.user-greeting small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Saldo Card */
+.saldo-container {
+    padding: 20px 15px;
+}
+
+.saldo-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.saldo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.saldo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.saldo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+}
+
+.saldo-title i {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.saldo-title h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.saldo-refresh {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #3498db;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.saldo-refresh:hover {
+    background: #3498db;
+    color: white;
+    transform: rotate(180deg);
+}
+
+.saldo-amount {
+    margin-bottom: 20px;
+}
+
+.loading-saldo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+.saldo-amount-display .amount {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.saldo-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #e74c3c;
+    font-size: 1rem;
+}
+
+.saldo-details {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e9ecef;
+    padding-top: 15px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item small {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.detail-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Quick Actions */
+.quick-actions-grid {
+    padding: 0 15px 20px;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-left: 5px;
+}
+
+.actions-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.action-card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    background: #f8f9fa;
+}
+
+.action-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.action-label {
+    font-size: 0.8rem;
+    color: #2c3e50;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Stats Grid */
+.stats-section {
+    padding: 0 15px 20px;
+}
+
+.stats-grid-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-card-mobile {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.stat-content h4 {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 3px;
+}
+
+.stat-note {
+    font-size: 0.75rem;
+    color: #95a5a6;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 85%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+.nav-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-user-avatar {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.nav-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-user-info strong {
+    font-size: 1.1rem;
+}
+
+.nav-user-info small {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.close-nav {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    padding: 20px 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #f8f9fa;
+    border-left-color: #3498db;
+    color: #3498db;
+}
+
+.nav-item i:first-child {
+    width: 30px;
+    font-size: 1.2rem;
+}
+
+.nav-item span {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.nav-item i:last-child {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+.nav-divider {
+    height: 1px;
+    background: #ecf0f1;
+    margin: 10px 20px;
+}
+
+.logout-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid transparent;
+}
+
+.logout-btn:hover {
+    color: #c0392b;
+    background: #f8f9fa;
+    border-left-color: #e74c3c;
+}
+
+.logout-btn i:first-child {
+    width: 30px;
+    font-size: 1.2rem;
+}
+
+.logout-btn span {
+    flex: 1;
+}
+
+.logout-btn i:last-child {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+.nav-footer {
+    padding: 20px;
+    text-align: center;
+    color: #95a5a6;
+    font-size: 0.8rem;
+    border-top: 1px solid #ecf0f1;
+    margin-top: auto;
+}
+
+/* System Info */
+.system-info-card {
+    background: white;
+    margin: 0 15px 20px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.system-status {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-icon {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3498db;
+    font-size: 1.1rem;
+}
+
+.status-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-label {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.status-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status-value.active {
+    color: #2ecc71;
+}
+
+.status-value.secure {
+    color: #3498db;
+}
+
+/* Footer */
+.mobile-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e9ecef;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #95a5a6;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.footer-nav-item.active {
+    color: #3498db;
+}
+
+.footer-nav-item i {
+    font-size: 1.2rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: modalSlide 0.3s ease;
+}
+
+@keyframes modalSlide {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+    padding: 30px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5ee;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #666;
+    border: 2px solid #e1e5ee;
+}
+
+.btn-secondary:hover {
+    background: #e9ecef;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+.input-with-button {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secondary.small {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.input-with-prefix {
+    position: relative;
+}
+
+.input-prefix {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-weight: 500;
+}
+
+.input-with-prefix .form-control {
+    padding-left: 45px;
+}
+
+.conditional-field {
+    transition: all 0.3s ease;
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.type-deposit {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border: 1px solid #10b981;
+}
+
+.type-withdraw {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.customer-info {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.customer-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.customer-detail:last-child {
+    margin-bottom: 0;
+}
+
+.customer-detail i {
+    color: #3498db;
+    width: 16px;
+}
+
+.transaction-summary {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.summary-item span {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.summary-item strong {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.amount-display {
+    color: #10b981 !important;
+    font-weight: 700 !important;
+}
+
+.form-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.form-info {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #3498db;
+}
+
+.form-info small {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #495057;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .stats-grid-mobile {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .mobile-nav {
+        width: 300px;
+    }
+    
+    .modal-content {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .actions-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid-mobile {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Tambahkan ke adminHome.css */
+
+/* Role-based color coding untuk action cards */
+.action-card[data-role="admin"] .action-icon {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.action-card[data-role="operator"] .action-icon {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.action-card[data-role="viewer"] .action-icon {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.action-card[data-role="anggota"] .action-icon {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+/* Role badge untuk user info */
+.role-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.role-admin {
+    background: #3498db;
+    color: white;
+}
+
+.role-operator {
+    background: #2ecc71;
+    color: white;
+}
+
+.role-viewer {
+    background: #95a5a6;
+    color: white;
+}
+
+.role-anggota {
+    background: #9b59b6;
+    color: white;
+}
+/* Update di bagian Mobile Header Styles */
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.header-title-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.app-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.app-tagline {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    margin-top: 2px;
+    letter-spacing: 0.3px;
+}
+
+.header-title i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Untuk spacing yang lebih baik */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Ubah dari center ke flex-start */
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.menu-toggle {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    margin-top: 3px; /* Tambahkan margin top untuk alignment */
+}
+
+.notification-btn {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 3px; /* Tambahkan margin top untuk alignment */
+}
+
+/* Responsive design */
+@media (max-width: 360px) {
+    .app-name {
+        font-size: 1rem;
+    }
+    
+    .app-tagline {
+        font-size: 0.7rem;
+    }
+    
+    .header-title i {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .app-name {
+        font-size: 1.2rem;
+    }
+    
+    .app-tagline {
+        font-size: 0.8rem;
+    }
+}
+
+/* Untuk layar sangat kecil */
+@media (max-width: 320px) {
+    .header-title-text {
+        max-width: 150px;
+    }
+    
+    .app-name {
+        font-size: 0.95rem;
+    }
+    
+    .app-tagline {
+        font-size: 0.65rem;
+    }
+}
+/* Tambahkan di adminHome.css atau dalam style tag di HTML */
+.type-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.type-deposit {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+    border: 1px solid #2ecc71;
+}
+
+.type-withdraw {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #2980b9;
+    border: 1px solid #3498db;
+}
+
+/* Untuk status lainnya */
+.type-pending {
+    background-color: rgba(241, 196, 15, 0.1);
+    color: #f39c12;
+    border: 1px solid #f1c40f;
+}
+
+.type-cancelled {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #c0392b;
+    border: 1px solid #e74c3c;
+}
+
+/* Tambahkan di CSS Anda */
+.success-border {
+    border: 2px solid #2ecc71 !important;
+    border-radius: 6px;
+}
+
+.error-border {
+    border: 2px solid #e74c3c !important;
+    border-radius: 6px;
+}
+/* Di file adminHome.css atau tambahkan di pembiayaan.html */
+.type-deposit {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.type-withdraw {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
+
+.rupiah-formatted {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
+
+}
+

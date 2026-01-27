@@ -1,0 +1,1 @@
+echo web: java -Xmx256m -Xss512k -jar target/*.jar --spring.profiles.active=render > Procfile

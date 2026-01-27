@@ -1,0 +1,994 @@
+2026-01-16 00:02:13.938 DEBUG 20796 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:02:13.946 DEBUG 20796 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:02:13.947 DEBUG 20796 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:02:13.949 DEBUG 20796 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:02:13.955 DEBUG 20796 --- [nio-2121-exec-7] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:02:13.975 DEBUG 20796 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:02:13.978 DEBUG 20796 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:02:14.014 DEBUG 20796 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:02:14.018 DEBUG 20796 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:02:14.018 DEBUG 20796 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:02:14.020 DEBUG 20796 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:02:14.020 DEBUG 20796 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:02:14.020 DEBUG 20796 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:02:14.021 DEBUG 20796 --- [nio-2121-exec-6] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:02:14.023 DEBUG 20796 --- [nio-2121-exec-8] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:02:14.033 DEBUG 20796 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:02:14.044 DEBUG 20796 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:02:14.050 DEBUG 20796 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:02:14.054 DEBUG 20796 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:02:14.103 DEBUG 20796 --- [io-2121-exec-10] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:02:14.105 DEBUG 20796 --- [io-2121-exec-10] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:02:14.108  WARN 20796 --- [nio-2121-exec-9] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:02:14.108 DEBUG 20796 --- [io-2121-exec-10] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:02:14.110  WARN 20796 --- [nio-2121-exec-9] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:02:14.120 DEBUG 20796 --- [io-2121-exec-10] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:02:14.124 DEBUG 20796 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:02:14.126 DEBUG 20796 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:02:14.128 DEBUG 20796 --- [io-2121-exec-10] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:02:14.129 DEBUG 20796 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:02:14.130 DEBUG 20796 --- [io-2121-exec-10] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:02:14.131 DEBUG 20796 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:02:14.132 DEBUG 20796 --- [io-2121-exec-10] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:02:14.135 DEBUG 20796 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:02:14.136 DEBUG 20796 --- [io-2121-exec-10] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:02:14.139 DEBUG 20796 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:02:14.139 DEBUG 20796 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:02:14.140 DEBUG 20796 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@4683a4e7]
+2026-01-16 00:02:14.141 DEBUG 20796 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:02:14.142 DEBUG 20796 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:02:14 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:02:14.142 DEBUG 20796 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:02:14.143 DEBUG 20796 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:02:14.144 DEBUG 20796 --- [io-2121-exec-10] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:02:42.508  WARN 20796 --- [nio-2121-exec-2] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:02:42.509  WARN 20796 --- [nio-2121-exec-2] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:02:42.511 DEBUG 20796 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:02:42.512 DEBUG 20796 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:02:42.513 DEBUG 20796 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:02:42.515 DEBUG 20796 --- [nio-2121-exec-2] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:02:42.524 DEBUG 20796 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:02:42.527 DEBUG 20796 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@53a5b3b6]
+2026-01-16 00:02:42.530 DEBUG 20796 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:02:42.531 DEBUG 20796 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:03:20.884  WARN 20796 --- [nio-2121-exec-3] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:03:20.885  WARN 20796 --- [nio-2121-exec-3] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:03:20.886 DEBUG 20796 --- [nio-2121-exec-3] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:03:20.892 DEBUG 20796 --- [nio-2121-exec-3] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:03:20.892 DEBUG 20796 --- [nio-2121-exec-3] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:03:20.893 DEBUG 20796 --- [nio-2121-exec-3] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:03:20.924 DEBUG 20796 --- [nio-2121-exec-3] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@7b4a4a89]
+2026-01-16 00:03:20.933  INFO 20796 --- [nio-2121-exec-3] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:03:20.992 DEBUG 20796 --- [nio-2121-exec-3] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:03:20.993 DEBUG 20796 --- [nio-2121-exec-3] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@497698ab]
+2026-01-16 00:03:20.995 DEBUG 20796 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:03:20.996 DEBUG 20796 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:03:21.002  WARN 20796 --- [nio-2121-exec-4] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:03:21.003  WARN 20796 --- [nio-2121-exec-4] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:03:21.006 DEBUG 20796 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:03:21.006 DEBUG 20796 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:03:21.007 DEBUG 20796 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:03:21.007 DEBUG 20796 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:03:21.010 DEBUG 20796 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:03:21.010 DEBUG 20796 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@512caca4]
+2026-01-16 00:03:21.012 DEBUG 20796 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:03:21.013 DEBUG 20796 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:04:10.787 DEBUG 20796 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:04:10.789 DEBUG 20796 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:04:10.789 DEBUG 20796 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:04:10.790 DEBUG 20796 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:04:10.792 DEBUG 20796 --- [nio-2121-exec-5] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:04:10.808 DEBUG 20796 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:04:10.808 DEBUG 20796 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:04:10.830 DEBUG 20796 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:04:10.832 DEBUG 20796 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:04:10.832 DEBUG 20796 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:04:10.833 DEBUG 20796 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:04:10.833 DEBUG 20796 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:04:10.833 DEBUG 20796 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:04:10.833 DEBUG 20796 --- [nio-2121-exec-7] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:04:10.835 DEBUG 20796 --- [nio-2121-exec-6] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:04:10.838 DEBUG 20796 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:04:10.839 DEBUG 20796 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:04:10.839 DEBUG 20796 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:04:10.840 DEBUG 20796 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:04:10.883 DEBUG 20796 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:04:10.885 DEBUG 20796 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:04:10.886 DEBUG 20796 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:04:10.886 DEBUG 20796 --- [nio-2121-exec-8] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:04:10.888 DEBUG 20796 --- [nio-2121-exec-8] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:04:10.889 DEBUG 20796 --- [nio-2121-exec-8] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:04:10.889  WARN 20796 --- [nio-2121-exec-9] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:04:10.889 DEBUG 20796 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:04:10.889  WARN 20796 --- [nio-2121-exec-9] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:04:10.890 DEBUG 20796 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:04:10.890 DEBUG 20796 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:04:10.891 DEBUG 20796 --- [nio-2121-exec-8] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:04:10.891 DEBUG 20796 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:04:10.891 DEBUG 20796 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:04:10.891 DEBUG 20796 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:04:10.892 DEBUG 20796 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:04:10.894 DEBUG 20796 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:04:10.896 DEBUG 20796 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:04:10 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:04:10.897 DEBUG 20796 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:04:10.897 DEBUG 20796 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@7f327d3c]
+2026-01-16 00:04:10.898 DEBUG 20796 --- [nio-2121-exec-8] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:04:10.899 DEBUG 20796 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:04:10.900 DEBUG 20796 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:04:30.758  WARN 20796 --- [io-2121-exec-10] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:04:30.759  WARN 20796 --- [io-2121-exec-10] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:04:30.760 DEBUG 20796 --- [io-2121-exec-10] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:04:30.761 DEBUG 20796 --- [io-2121-exec-10] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:04:30.761 DEBUG 20796 --- [io-2121-exec-10] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:04:30.762 DEBUG 20796 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:04:30.766 DEBUG 20796 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:04:30.767 DEBUG 20796 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@4c1ba97a]
+2026-01-16 00:04:30.770 DEBUG 20796 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:04:30.771 DEBUG 20796 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:16.982  INFO 15036 --- [           main] DanakuApplication                        : Starting DanakuApplication using Java 17.0.9 with PID 15036 (D:\projectku\danaku\target\classes started by 20070114 in D:\projectku\danaku)
+2026-01-16 00:12:16.987  INFO 15036 --- [           main] DanakuApplication                        : No active profile set, falling back to 1 default profile: "default"
+2026-01-16 00:12:20.437  INFO 15036 --- [           main] StandardService                          : Starting service [Tomcat]
+2026-01-16 00:12:20.438  INFO 15036 --- [           main] StandardEngine                           : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-16 00:12:20.631  INFO 15036 --- [           main] [/]                                      : Initializing Spring embedded WebApplicationContext
+2026-01-16 00:12:20.673  INFO 15036 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
+2026-01-16 00:12:20.688  INFO 15036 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
+2026-01-16 00:12:21.007  INFO 15036 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-16 00:12:21.168  INFO 15036 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-16 00:12:21.263  INFO 15036 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
+2026-01-16 00:12:22.153  INFO 15036 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
+2026-01-16 00:12:22.669  INFO 15036 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@5112b7
+2026-01-16 00:12:22.674  INFO 15036 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
+2026-01-16 00:12:24.479  INFO 15036 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16 00:12:25.164  INFO 15036 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
+2026-01-16 00:12:25.233  WARN 15036 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16 00:12:25.581 DEBUG 15036 --- [           main] RequestMappingHandlerMapping             : 23 mappings in 'requestMappingHandlerMapping'
+2026-01-16 00:12:25.814 DEBUG 15036 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-16 00:12:26.243  INFO 15036 --- [           main] DefaultSecurityFilterChain               : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46df794e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cd6a827, org.springframework.security.web.context.SecurityContextHolderFilter@7077ae9c, org.springframework.security.web.header.HeaderWriterFilter@3f1e18b1, org.springframework.web.filter.CorsFilter@6cd65042, org.springframework.security.web.authentication.logout.LogoutFilter@3ad9fea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22a1d77b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f30d0eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7674f9d4, org.springframework.security.web.access.ExceptionTranslationFilter@571903ff, org.springframework.security.web.access.intercept.AuthorizationFilter@1ec09a68]
+2026-01-16 00:12:26.369 DEBUG 15036 --- [           main] yConfiguration$CompositeFilterChainProxy : Filter 'springSecurityFilterChain' configured for use
+2026-01-16 00:12:26.849 DEBUG 15036 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-16 00:12:26.996 DEBUG 15036 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-16 00:12:27.414  INFO 15036 --- [           main] DanakuApplication                        : Started DanakuApplication in 11.223 seconds (process running for 12.473)
+2026-01-16 00:12:27.527  INFO 15036 --- [nio-2121-exec-2] [/]                                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-16 00:12:27.530  INFO 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Initializing Servlet 'dispatcherServlet'
+2026-01-16 00:12:27.532 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Detected StandardServletMultipartResolver
+2026-01-16 00:12:27.534 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Detected AcceptHeaderLocaleResolver
+2026-01-16 00:12:27.538 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Detected FixedThemeResolver
+2026-01-16 00:12:27.545 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7bc3c59f
+2026-01-16 00:12:27.547 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4bba2704
+2026-01-16 00:12:27.549 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-16 00:12:27.550  INFO 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Completed initialization in 19 ms
+2026-01-16 00:12:27.601 DEBUG 15036 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:12:27.619 DEBUG 15036 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:12:27.625 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:12:27.628 DEBUG 15036 --- [nio-2121-exec-2] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:12:27.670 DEBUG 15036 --- [nio-2121-exec-2] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:12:28.101 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:28.115 DEBUG 15036 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:28.168 DEBUG 15036 --- [nio-2121-exec-3] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:12:28.170 DEBUG 15036 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:12:28.177 DEBUG 15036 --- [nio-2121-exec-3] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:12:28.182 DEBUG 15036 --- [nio-2121-exec-3] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:12:28.180 DEBUG 15036 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:12:28.187 DEBUG 15036 --- [nio-2121-exec-3] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:12:28.188 DEBUG 15036 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:12:28.214 DEBUG 15036 --- [nio-2121-exec-1] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:12:28.231 DEBUG 15036 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:28.235 DEBUG 15036 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:28.234 DEBUG 15036 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:28.246 DEBUG 15036 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:28.321 DEBUG 15036 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:12:28.335 DEBUG 15036 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:12:28.402 DEBUG 15036 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:12:28.419 DEBUG 15036 --- [nio-2121-exec-4] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:12:28.429 DEBUG 15036 --- [nio-2121-exec-4] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:12:28.439 DEBUG 15036 --- [nio-2121-exec-4] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:12:28.449 DEBUG 15036 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:12:28.451 DEBUG 15036 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:28.471 DEBUG 15036 --- [nio-2121-exec-4] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:12:28.476 DEBUG 15036 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:12:28.518 DEBUG 15036 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:12:28.536 DEBUG 15036 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:12:28 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:12:28.582  WARN 15036 --- [nio-2121-exec-5] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:12:28.590  WARN 15036 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:12:28.632 DEBUG 15036 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:12:28.695 DEBUG 15036 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:12:28.715 DEBUG 15036 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:12:28.731 DEBUG 15036 --- [nio-2121-exec-4] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:12:28.739 DEBUG 15036 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:12:29.021 DEBUG 15036 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:12:29.025 DEBUG 15036 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@118dfb13]
+2026-01-16 00:12:29.048 DEBUG 15036 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:29.051 DEBUG 15036 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:36.172 DEBUG 15036 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:12:36.174 DEBUG 15036 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:12:36.175 DEBUG 15036 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:12:36.176 DEBUG 15036 --- [nio-2121-exec-6] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:12:36.178 DEBUG 15036 --- [nio-2121-exec-6] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:12:36.207 DEBUG 15036 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:36.209 DEBUG 15036 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:36.253 DEBUG 15036 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:12:36.257 DEBUG 15036 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:12:36.278 DEBUG 15036 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:12:36.280 DEBUG 15036 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:12:36.285 DEBUG 15036 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:12:36.286 DEBUG 15036 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:12:36.289 DEBUG 15036 --- [nio-2121-exec-9] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:12:36.291 DEBUG 15036 --- [nio-2121-exec-8] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:12:36.300 DEBUG 15036 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:36.301 DEBUG 15036 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:36.302 DEBUG 15036 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:36.305 DEBUG 15036 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:36.366 DEBUG 15036 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:12:36.372 DEBUG 15036 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:12:36.373 DEBUG 15036 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:12:36.374  WARN 15036 --- [io-2121-exec-10] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:12:36.376 DEBUG 15036 --- [nio-2121-exec-7] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:12:36.376  WARN 15036 --- [io-2121-exec-10] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:12:36.380 DEBUG 15036 --- [io-2121-exec-10] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:12:36.381 DEBUG 15036 --- [nio-2121-exec-7] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:12:36.385 DEBUG 15036 --- [io-2121-exec-10] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:12:36.388 DEBUG 15036 --- [nio-2121-exec-7] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:12:36.388 DEBUG 15036 --- [io-2121-exec-10] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:12:36.391 DEBUG 15036 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:12:36.392 DEBUG 15036 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:12:36.392 DEBUG 15036 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:36.395 DEBUG 15036 --- [nio-2121-exec-7] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:12:36.397 DEBUG 15036 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:12:36.398 DEBUG 15036 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:12:36.406 DEBUG 15036 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@3914dc4e]
+2026-01-16 00:12:36.407 DEBUG 15036 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:12:36.409 DEBUG 15036 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:36.411 DEBUG 15036 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:12:36 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:12:36.411 DEBUG 15036 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:12:36.415 DEBUG 15036 --- [nio-2121-exec-7] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:12:42.315  WARN 15036 --- [nio-2121-exec-2] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:12:42.316  WARN 15036 --- [nio-2121-exec-2] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:12:42.317 DEBUG 15036 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:12:42.319 DEBUG 15036 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:12:42.319 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:12:42.320 DEBUG 15036 --- [nio-2121-exec-2] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:12:42.510 DEBUG 15036 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:12:42.510 DEBUG 15036 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@4cbf729b]
+2026-01-16 00:12:42.517 DEBUG 15036 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:12:42.518 DEBUG 15036 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:13:11.581 DEBUG 15036 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:13:11.584 DEBUG 15036 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:13:11.585 DEBUG 15036 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:13:11.586 DEBUG 15036 --- [nio-2121-exec-1] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:13:11.592 DEBUG 15036 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:13:11.594 DEBUG 15036 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:13:40.607  WARN 15036 --- [nio-2121-exec-3] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:13:40.608  WARN 15036 --- [nio-2121-exec-3] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:13:40.608 DEBUG 15036 --- [nio-2121-exec-3] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:13:40.613 DEBUG 15036 --- [nio-2121-exec-3] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:13:40.614 DEBUG 15036 --- [nio-2121-exec-3] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:13:40.615 DEBUG 15036 --- [nio-2121-exec-3] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:13:40.651 DEBUG 15036 --- [nio-2121-exec-3] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@3b057fd1]
+2026-01-16 00:13:40.664  INFO 15036 --- [nio-2121-exec-3] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:13:40.765 DEBUG 15036 --- [nio-2121-exec-3] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:13:40.766 DEBUG 15036 --- [nio-2121-exec-3] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@59e8e37c]
+2026-01-16 00:13:40.769 DEBUG 15036 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:13:40.769 DEBUG 15036 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:13:40.777  WARN 15036 --- [nio-2121-exec-4] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:13:40.778  WARN 15036 --- [nio-2121-exec-4] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:13:40.779 DEBUG 15036 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:13:40.780 DEBUG 15036 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:13:40.781 DEBUG 15036 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:13:40.782 DEBUG 15036 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:13:40.785 DEBUG 15036 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:13:40.785 DEBUG 15036 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@71c21b7f]
+2026-01-16 00:13:40.789 DEBUG 15036 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:13:40.790 DEBUG 15036 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:13:51.585  WARN 15036 --- [nio-2121-exec-5] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:13:51.586  WARN 15036 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:13:51.587 DEBUG 15036 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:13:51.587 DEBUG 15036 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:13:51.588 DEBUG 15036 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:13:51.589 DEBUG 15036 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:13:51.593 DEBUG 15036 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:13:51.594 DEBUG 15036 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@72416997]
+2026-01-16 00:13:51.596 DEBUG 15036 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:13:51.597 DEBUG 15036 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:14:23.386 DEBUG 15036 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:14:23.386 DEBUG 15036 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:14:23.387 DEBUG 15036 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:14:23.389 DEBUG 15036 --- [nio-2121-exec-6] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:14:23.393 DEBUG 15036 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:14:23.394 DEBUG 15036 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:28:10.273  INFO 13236 --- [           main] DanakuApplication                        : Starting DanakuApplication using Java 17.0.9 with PID 13236 (D:\projectku\danaku\target\classes started by 20070114 in D:\projectku\danaku)
+2026-01-16 00:28:10.277  INFO 13236 --- [           main] DanakuApplication                        : No active profile set, falling back to 1 default profile: "default"
+2026-01-16 00:28:13.108  INFO 13236 --- [           main] StandardService                          : Starting service [Tomcat]
+2026-01-16 00:28:13.109  INFO 13236 --- [           main] StandardEngine                           : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-16 00:28:13.243  INFO 13236 --- [           main] [/]                                      : Initializing Spring embedded WebApplicationContext
+2026-01-16 00:28:13.270  INFO 13236 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
+2026-01-16 00:28:13.276  INFO 13236 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
+2026-01-16 00:28:13.588  INFO 13236 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-16 00:28:13.680  INFO 13236 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-16 00:28:13.737  INFO 13236 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
+2026-01-16 00:28:14.175  INFO 13236 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
+2026-01-16 00:28:14.462  INFO 13236 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@5112b7
+2026-01-16 00:28:14.465  INFO 13236 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
+2026-01-16 00:28:15.719  INFO 13236 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16 00:28:16.336  INFO 13236 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
+2026-01-16 00:28:16.376  WARN 13236 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16 00:28:16.590 DEBUG 13236 --- [           main] RequestMappingHandlerMapping             : 23 mappings in 'requestMappingHandlerMapping'
+2026-01-16 00:28:16.718 DEBUG 13236 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-16 00:28:16.940  INFO 13236 --- [           main] DefaultSecurityFilterChain               : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46df794e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cd6a827, org.springframework.security.web.context.SecurityContextHolderFilter@7077ae9c, org.springframework.security.web.header.HeaderWriterFilter@3f1e18b1, org.springframework.web.filter.CorsFilter@6cd65042, org.springframework.security.web.authentication.logout.LogoutFilter@3ad9fea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22a1d77b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f30d0eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7674f9d4, org.springframework.security.web.access.ExceptionTranslationFilter@571903ff, org.springframework.security.web.access.intercept.AuthorizationFilter@1ec09a68]
+2026-01-16 00:28:17.014 DEBUG 13236 --- [           main] yConfiguration$CompositeFilterChainProxy : Filter 'springSecurityFilterChain' configured for use
+2026-01-16 00:28:17.351 DEBUG 13236 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-16 00:28:17.421 DEBUG 13236 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-16 00:28:17.695  INFO 13236 --- [           main] DanakuApplication                        : Started DanakuApplication in 7.897 seconds (process running for 8.587)
+2026-01-16 00:28:28.913  INFO 13236 --- [nio-2121-exec-1] [/]                                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-16 00:28:28.914  INFO 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Initializing Servlet 'dispatcherServlet'
+2026-01-16 00:28:28.915 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Detected StandardServletMultipartResolver
+2026-01-16 00:28:28.916 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Detected AcceptHeaderLocaleResolver
+2026-01-16 00:28:28.917 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Detected FixedThemeResolver
+2026-01-16 00:28:28.918 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7bc3c59f
+2026-01-16 00:28:28.919 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@4bba2704
+2026-01-16 00:28:28.920 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-16 00:28:28.921  INFO 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Completed initialization in 5 ms
+2026-01-16 00:28:28.952 DEBUG 13236 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:28:28.960 DEBUG 13236 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:28:28.962 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:28:28.965 DEBUG 13236 --- [nio-2121-exec-1] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:28:28.984 DEBUG 13236 --- [nio-2121-exec-1] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:28:29.259 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:28:29.262 DEBUG 13236 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:28:29.285 DEBUG 13236 --- [nio-2121-exec-3] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:28:29.285 DEBUG 13236 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:28:29.287 DEBUG 13236 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:28:29.287 DEBUG 13236 --- [nio-2121-exec-3] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:28:29.288 DEBUG 13236 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:28:29.288 DEBUG 13236 --- [nio-2121-exec-3] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:28:29.289 DEBUG 13236 --- [nio-2121-exec-2] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:28:29.289 DEBUG 13236 --- [nio-2121-exec-3] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:28:29.311 DEBUG 13236 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:28:29.312 DEBUG 13236 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:28:29.326 DEBUG 13236 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:28:29.326 DEBUG 13236 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:28:29.360 DEBUG 13236 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:28:29.361 DEBUG 13236 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:28:29.362 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:28:29.364 DEBUG 13236 --- [nio-2121-exec-4] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:28:29.368 DEBUG 13236 --- [nio-2121-exec-4] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:28:29.373 DEBUG 13236 --- [nio-2121-exec-4] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:28:29.376 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:28:29.377 DEBUG 13236 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:28:29.385 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:28:29.390 DEBUG 13236 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:28:29.429 DEBUG 13236 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:28:29.435 DEBUG 13236 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:28:29 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:28:29.464  WARN 13236 --- [nio-2121-exec-5] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:28:29.471  WARN 13236 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:28:29.474 DEBUG 13236 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:28:29.475 DEBUG 13236 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:28:29.476 DEBUG 13236 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:28:29.477 DEBUG 13236 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:28:29.509 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:28:29.603 DEBUG 13236 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:28:29.604 DEBUG 13236 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@2fab9155]
+2026-01-16 00:28:29.619 DEBUG 13236 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:28:29.620 DEBUG 13236 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:05.367  WARN 13236 --- [nio-2121-exec-6] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:29:05.368  WARN 13236 --- [nio-2121-exec-6] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:29:05.369 DEBUG 13236 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:29:05.371 DEBUG 13236 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:29:05.371 DEBUG 13236 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:29:05.373 DEBUG 13236 --- [nio-2121-exec-6] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:29:05.516 DEBUG 13236 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:29:05.518 DEBUG 13236 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@6ae7d862]
+2026-01-16 00:29:05.522 DEBUG 13236 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:29:05.523 DEBUG 13236 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:45.275 DEBUG 13236 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:29:45.276 DEBUG 13236 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:29:45.276 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:29:45.278 DEBUG 13236 --- [nio-2121-exec-8] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:29:45.282 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:29:45.289 DEBUG 13236 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:50.937 DEBUG 13236 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:29:50.938 DEBUG 13236 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:29:50.939 DEBUG 13236 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:29:50.940 DEBUG 13236 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:29:50.942 DEBUG 13236 --- [nio-2121-exec-9] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:29:50.969 DEBUG 13236 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:29:50.970 DEBUG 13236 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:51.049 DEBUG 13236 --- [io-2121-exec-10] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:29:51.050 DEBUG 13236 --- [io-2121-exec-10] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:29:51.051 DEBUG 13236 --- [io-2121-exec-10] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:29:51.052 DEBUG 13236 --- [io-2121-exec-10] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:29:51.052 DEBUG 13236 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:29:51.052 DEBUG 13236 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:29:51.053 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:29:51.058 DEBUG 13236 --- [nio-2121-exec-1] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:29:51.060 DEBUG 13236 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:29:51.063 DEBUG 13236 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:51.065 DEBUG 13236 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:29:51.065 DEBUG 13236 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:51.232 DEBUG 13236 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:29:51.234 DEBUG 13236 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:29:51.235 DEBUG 13236 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:29:51.236 DEBUG 13236 --- [nio-2121-exec-2] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:29:51.242 DEBUG 13236 --- [nio-2121-exec-2] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:29:51.244 DEBUG 13236 --- [nio-2121-exec-2] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:29:51.245 DEBUG 13236 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:29:51.246 DEBUG 13236 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:29:51.247 DEBUG 13236 --- [nio-2121-exec-2] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:29:51.248 DEBUG 13236 --- [nio-2121-exec-2] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:29:51.251 DEBUG 13236 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:29:51.251 DEBUG 13236 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:29:51 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:29:51.254 DEBUG 13236 --- [nio-2121-exec-2] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:29:51.284  WARN 13236 --- [nio-2121-exec-3] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:29:51.285  WARN 13236 --- [nio-2121-exec-3] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:29:51.286 DEBUG 13236 --- [nio-2121-exec-3] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:29:51.287 DEBUG 13236 --- [nio-2121-exec-3] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:29:51.291 DEBUG 13236 --- [nio-2121-exec-3] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:29:51.295 DEBUG 13236 --- [nio-2121-exec-3] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:29:51.305 DEBUG 13236 --- [nio-2121-exec-3] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:29:51.310 DEBUG 13236 --- [nio-2121-exec-3] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@4bbb866e]
+2026-01-16 00:29:51.314 DEBUG 13236 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:29:51.315 DEBUG 13236 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:00.858  WARN 13236 --- [nio-2121-exec-4] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:30:00.859  WARN 13236 --- [nio-2121-exec-4] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:30:00.860 DEBUG 13236 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:30:00.860 DEBUG 13236 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:30:00.861 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:30:00.862 DEBUG 13236 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:30:00.868 DEBUG 13236 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:30:00.868 DEBUG 13236 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@62d45938]
+2026-01-16 00:30:00.871 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:30:00.873 DEBUG 13236 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:16.702 DEBUG 13236 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:30:16.704 DEBUG 13236 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:30:16.705 DEBUG 13236 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:30:16.706 DEBUG 13236 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:30:16.708 DEBUG 13236 --- [nio-2121-exec-5] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2026-01-16 00:30:16.724 DEBUG 13236 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:30:16.726 DEBUG 13236 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:16.975 DEBUG 13236 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:30:16.976 DEBUG 13236 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:30:16.977 DEBUG 13236 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:30:16.977 DEBUG 13236 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:30:16.978 DEBUG 13236 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:30:16.980 DEBUG 13236 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:30:16.980 DEBUG 13236 --- [nio-2121-exec-6] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:30:16.981 DEBUG 13236 --- [nio-2121-exec-7] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:30:16.984 DEBUG 13236 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:30:16.984 DEBUG 13236 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:16.985 DEBUG 13236 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:30:16.986 DEBUG 13236 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:17.133 DEBUG 13236 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2026-01-16 00:30:17.134 DEBUG 13236 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /.well-known/appspecific/com.chrome.devtools.json
+2026-01-16 00:30:17.135 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/.well-known/appspecific/com.chrome.devtools.json", parameters={}
+2026-01-16 00:30:17.137 DEBUG 13236 --- [nio-2121-exec-8] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:30:17.140 DEBUG 13236 --- [nio-2121-exec-8] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:30:17.141 DEBUG 13236 --- [nio-2121-exec-8] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-01-16 00:30:17.143 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:30:17.144 DEBUG 13236 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:17.145 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:30:17.148 DEBUG 13236 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:30:17.153 DEBUG 13236 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:30:17.155 DEBUG 13236 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:30:17 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:30:17.158 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:30:17.209  WARN 13236 --- [nio-2121-exec-9] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Fri Jan 16 00:27:35 WIB 2026
+2026-01-16 00:30:17.209  WARN 13236 --- [nio-2121-exec-9] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:30:17.210 DEBUG 13236 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:30:17.211 DEBUG 13236 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:30:17.211 DEBUG 13236 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:30:17.212 DEBUG 13236 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:30:17.215 DEBUG 13236 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:30:17.216 DEBUG 13236 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@40e61511]
+2026-01-16 00:30:17.221 DEBUG 13236 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:30:17.221 DEBUG 13236 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:30:35.175  WARN 13236 --- [io-2121-exec-10] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Fri Jan 16 00:27:35 WIB 2026
+2026-01-16 00:30:35.176  WARN 13236 --- [io-2121-exec-10] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:30:35.176 DEBUG 13236 --- [io-2121-exec-10] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:30:35.177 DEBUG 13236 --- [io-2121-exec-10] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:30:35.177 DEBUG 13236 --- [io-2121-exec-10] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:30:35.178 DEBUG 13236 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:30:35.182 DEBUG 13236 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:30:35.182 DEBUG 13236 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@7fe93d5f]
+2026-01-16 00:30:35.184 DEBUG 13236 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:30:35.185 DEBUG 13236 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:34:54.200 DEBUG 13236 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:34:54.200 DEBUG 13236 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:34:54.201 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:34:54.202 DEBUG 13236 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:34:54.203 DEBUG 13236 --- [nio-2121-exec-4] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:34:54.216 DEBUG 13236 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:34:54.216 DEBUG 13236 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:34:54.250 DEBUG 13236 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:34:54.252 DEBUG 13236 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:34:54.252 DEBUG 13236 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:34:54.252 DEBUG 13236 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:34:54.253 DEBUG 13236 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:34:54.254 DEBUG 13236 --- [nio-2121-exec-5] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:34:54.257 DEBUG 13236 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:34:54.260 DEBUG 13236 --- [nio-2121-exec-6] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:34:54.261 DEBUG 13236 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:34:54.264 DEBUG 13236 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:34:54.267 DEBUG 13236 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:34:54.272 DEBUG 13236 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:34:54.318 DEBUG 13236 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:34:54.319 DEBUG 13236 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:34:54.323 DEBUG 13236 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:34:54.324 DEBUG 13236 --- [nio-2121-exec-7] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:34:54.326  WARN 13236 --- [nio-2121-exec-8] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:34:54.326  WARN 13236 --- [nio-2121-exec-8] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:34:54.327 DEBUG 13236 --- [nio-2121-exec-7] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:34:54.327 DEBUG 13236 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:34:54.328 DEBUG 13236 --- [nio-2121-exec-7] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:34:54.328 DEBUG 13236 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:34:54.329 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:34:54.329 DEBUG 13236 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:34:54.329 DEBUG 13236 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:34:54.329 DEBUG 13236 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:34:54.331 DEBUG 13236 --- [nio-2121-exec-7] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:34:54.332 DEBUG 13236 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:34:54.334 DEBUG 13236 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:34:54.334 DEBUG 13236 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:34:54.335 DEBUG 13236 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@1f58f758]
+2026-01-16 00:34:54.335 DEBUG 13236 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:34:54 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:34:54.336 DEBUG 13236 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:34:54.338 DEBUG 13236 --- [nio-2121-exec-7] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:34:54.339 DEBUG 13236 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:34:57.835  WARN 13236 --- [nio-2121-exec-9] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:34:57.836  WARN 13236 --- [nio-2121-exec-9] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:34:57.837 DEBUG 13236 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:34:57.837 DEBUG 13236 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:34:57.838 DEBUG 13236 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:34:57.839 DEBUG 13236 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:34:57.844 DEBUG 13236 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:34:57.846 DEBUG 13236 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@507f031c]
+2026-01-16 00:34:57.848 DEBUG 13236 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:34:57.849 DEBUG 13236 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:38:21.295  INFO 11732 --- [           main] DanakuApplication                        : Starting DanakuApplication using Java 17.0.9 with PID 11732 (D:\projectku\danaku\target\classes started by 20070114 in D:\projectku\danaku)
+2026-01-16 00:38:21.299  INFO 11732 --- [           main] DanakuApplication                        : No active profile set, falling back to 1 default profile: "default"
+2026-01-16 00:38:24.760  INFO 11732 --- [           main] StandardService                          : Starting service [Tomcat]
+2026-01-16 00:38:24.761  INFO 11732 --- [           main] StandardEngine                           : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-16 00:38:24.943  INFO 11732 --- [           main] [/]                                      : Initializing Spring embedded WebApplicationContext
+2026-01-16 00:38:24.974  INFO 11732 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
+2026-01-16 00:38:24.981  INFO 11732 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
+2026-01-16 00:38:25.261  INFO 11732 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-16 00:38:25.400  INFO 11732 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-16 00:38:25.535  INFO 11732 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
+2026-01-16 00:38:26.111  INFO 11732 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
+2026-01-16 00:38:26.546  INFO 11732 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@5112b7
+2026-01-16 00:38:26.549  INFO 11732 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
+2026-01-16 00:38:28.568  INFO 11732 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16 00:38:29.264  INFO 11732 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
+2026-01-16 00:38:29.365  WARN 11732 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16 00:38:29.693 DEBUG 11732 --- [           main] RequestMappingHandlerMapping             : 23 mappings in 'requestMappingHandlerMapping'
+2026-01-16 00:38:29.865 DEBUG 11732 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-16 00:38:30.154  INFO 11732 --- [           main] DefaultSecurityFilterChain               : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46df794e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cd6a827, org.springframework.security.web.context.SecurityContextHolderFilter@7077ae9c, org.springframework.security.web.header.HeaderWriterFilter@3f1e18b1, org.springframework.web.filter.CorsFilter@6cd65042, org.springframework.security.web.authentication.logout.LogoutFilter@3ad9fea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22a1d77b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f30d0eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7674f9d4, org.springframework.security.web.access.ExceptionTranslationFilter@571903ff, org.springframework.security.web.access.intercept.AuthorizationFilter@1ec09a68]
+2026-01-16 00:38:30.245 DEBUG 11732 --- [           main] yConfiguration$CompositeFilterChainProxy : Filter 'springSecurityFilterChain' configured for use
+2026-01-16 00:38:30.678 DEBUG 11732 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-16 00:38:30.752 DEBUG 11732 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-16 00:38:31.662  INFO 11732 --- [           main] DanakuApplication                        : Started DanakuApplication in 11.031 seconds (process running for 12.826)
+2026-01-16 00:39:31.867  INFO 12640 --- [           main] DanakuApplication                        : Starting DanakuApplication using Java 17.0.9 with PID 12640 (D:\projectku\danaku\target\classes started by 20070114 in D:\projectku\danaku)
+2026-01-16 00:39:31.871  INFO 12640 --- [           main] DanakuApplication                        : No active profile set, falling back to 1 default profile: "default"
+2026-01-16 00:39:34.909  INFO 12640 --- [           main] StandardService                          : Starting service [Tomcat]
+2026-01-16 00:39:34.909  INFO 12640 --- [           main] StandardEngine                           : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-16 00:39:35.086  INFO 12640 --- [           main] [/]                                      : Initializing Spring embedded WebApplicationContext
+2026-01-16 00:39:35.113  INFO 12640 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
+2026-01-16 00:39:35.121  INFO 12640 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
+2026-01-16 00:39:35.359  INFO 12640 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-16 00:39:35.476  INFO 12640 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-16 00:39:35.542  INFO 12640 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
+2026-01-16 00:39:35.979  INFO 12640 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
+2026-01-16 00:39:36.365  INFO 12640 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@56835f2f
+2026-01-16 00:39:36.369  INFO 12640 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
+2026-01-16 00:39:38.023  INFO 12640 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-16 00:39:39.227  INFO 12640 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
+2026-01-16 00:39:39.281  WARN 12640 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-16 00:39:39.646 DEBUG 12640 --- [           main] RequestMappingHandlerMapping             : 23 mappings in 'requestMappingHandlerMapping'
+2026-01-16 00:39:39.898 DEBUG 12640 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-16 00:39:40.249  INFO 12640 --- [           main] DefaultSecurityFilterChain               : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5cd6a827, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cd65042, org.springframework.security.web.context.SecurityContextHolderFilter@3fe3ebb3, org.springframework.security.web.header.HeaderWriterFilter@727de450, org.springframework.web.filter.CorsFilter@7674f9d4, org.springframework.security.web.authentication.logout.LogoutFilter@556e4588, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f30d0eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22fe90df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b5ceb5d, org.springframework.security.web.access.ExceptionTranslationFilter@689ea211, org.springframework.security.web.access.intercept.AuthorizationFilter@7da9b32c]
+2026-01-16 00:39:40.355 DEBUG 12640 --- [           main] yConfiguration$CompositeFilterChainProxy : Filter 'springSecurityFilterChain' configured for use
+2026-01-16 00:39:40.863 DEBUG 12640 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-16 00:39:40.929 DEBUG 12640 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-16 00:39:41.225  INFO 12640 --- [           main] DanakuApplication                        : Started DanakuApplication in 10.367 seconds (process running for 11.644)
+2026-01-16 00:39:48.514  INFO 12640 --- [nio-2121-exec-1] [/]                                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-16 00:39:48.516  INFO 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Initializing Servlet 'dispatcherServlet'
+2026-01-16 00:39:48.517 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Detected StandardServletMultipartResolver
+2026-01-16 00:39:48.518 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Detected AcceptHeaderLocaleResolver
+2026-01-16 00:39:48.519 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Detected FixedThemeResolver
+2026-01-16 00:39:48.521 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6db2a260
+2026-01-16 00:39:48.523 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5b5f61cc
+2026-01-16 00:39:48.524 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-01-16 00:39:48.525  INFO 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Completed initialization in 8 ms
+2026-01-16 00:39:48.585 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:39:48.604 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:39:48.608 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:39:48.610 DEBUG 12640 --- [nio-2121-exec-1] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:39:48.657 DEBUG 12640 --- [nio-2121-exec-1] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:39:48.978 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:39:48.981 DEBUG 12640 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:39:49.016 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:39:49.017 DEBUG 12640 --- [nio-2121-exec-3] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:39:49.019 DEBUG 12640 --- [nio-2121-exec-3] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:39:49.018 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:39:49.022 DEBUG 12640 --- [nio-2121-exec-3] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:39:49.025 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:39:49.029 DEBUG 12640 --- [nio-2121-exec-2] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:39:49.029 DEBUG 12640 --- [nio-2121-exec-3] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:39:49.044 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:39:49.046 DEBUG 12640 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:39:49.136 DEBUG 12640 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:39:49.137 DEBUG 12640 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:39:49.173 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:39:49.173 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:39:49.175 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:39:49.176 DEBUG 12640 --- [nio-2121-exec-4] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:39:49.181 DEBUG 12640 --- [nio-2121-exec-4] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:39:49.187 DEBUG 12640 --- [nio-2121-exec-4] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:39:49.188 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:39:49.190 DEBUG 12640 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:39:49.195 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:39:49.202 DEBUG 12640 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:39:49.249 DEBUG 12640 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:39:49.256 DEBUG 12640 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:39:49 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:39:49.301  WARN 12640 --- [nio-2121-exec-5] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:39:49.303  WARN 12640 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:39:49.307 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:39:49.308 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:39:49.310 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:39:49.311 DEBUG 12640 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:39:49.365 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:39:49.512 DEBUG 12640 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:39:49.512 DEBUG 12640 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@38768e01]
+2026-01-16 00:39:49.531 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:39:49.533 DEBUG 12640 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:39:53.195  WARN 12640 --- [nio-2121-exec-6] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:39:53.196  WARN 12640 --- [nio-2121-exec-6] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:39:53.197 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:39:53.198 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:39:53.198 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:39:53.200 DEBUG 12640 --- [nio-2121-exec-6] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:39:53.352 DEBUG 12640 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:39:53.353 DEBUG 12640 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@6a7963b6]
+2026-01-16 00:39:53.358 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:39:53.358 DEBUG 12640 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:40:11.647  WARN 12640 --- [nio-2121-exec-7] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:40:11.648  WARN 12640 --- [nio-2121-exec-7] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:40:11.649 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:40:11.655 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:40:11.656 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:40:11.657 DEBUG 12640 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:40:11.696 DEBUG 12640 --- [nio-2121-exec-7] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@2cb799ec]
+2026-01-16 00:40:11.708  INFO 12640 --- [nio-2121-exec-7] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:40:11.761 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:40:11.762 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@2da7fee9]
+2026-01-16 00:40:11.764 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:40:11.764 DEBUG 12640 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:40:11.773  WARN 12640 --- [nio-2121-exec-8] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:40:11.773  WARN 12640 --- [nio-2121-exec-8] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:40:11.775 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:40:11.776 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:40:11.776 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:40:11.777 DEBUG 12640 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:40:11.779 DEBUG 12640 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:40:11.779 DEBUG 12640 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@714cd87b]
+2026-01-16 00:40:11.781 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:40:11.782 DEBUG 12640 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:40:20.248  WARN 12640 --- [nio-2121-exec-9] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:40:20.249  WARN 12640 --- [nio-2121-exec-9] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:40:20.251 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:40:20.252 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:40:20.253 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:40:20.255 DEBUG 12640 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:40:20.264 DEBUG 12640 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:40:20.265 DEBUG 12640 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@5e2bc9e]
+2026-01-16 00:40:20.271 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:40:20.272 DEBUG 12640 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:40:35.621  WARN 12640 --- [io-2121-exec-10] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:40:35.622  WARN 12640 --- [io-2121-exec-10] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:40:35.622 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:40:35.623 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:40:35.624 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:40:35.624 DEBUG 12640 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:40:35.625 DEBUG 12640 --- [io-2121-exec-10] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@30c2166c]
+2026-01-16 00:40:35.626  INFO 12640 --- [io-2121-exec-10] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:40:35.633 DEBUG 12640 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:40:35.637 DEBUG 12640 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@6d86ad56]
+2026-01-16 00:40:35.639 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:40:35.640 DEBUG 12640 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:40:35.651  WARN 12640 --- [nio-2121-exec-1] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:40:35.651  WARN 12640 --- [nio-2121-exec-1] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:40:35.652 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:40:35.653 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:40:35.654 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:40:35.655 DEBUG 12640 --- [nio-2121-exec-1] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:40:35.657 DEBUG 12640 --- [nio-2121-exec-1] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:40:35.658 DEBUG 12640 --- [nio-2121-exec-1] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@37ace2b7]
+2026-01-16 00:40:35.660 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:40:35.660 DEBUG 12640 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:40:46.205  WARN 12640 --- [nio-2121-exec-2] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:40:46.211  WARN 12640 --- [nio-2121-exec-2] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:40:46.213 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:40:46.215 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:40:46.216 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:40:46.224 DEBUG 12640 --- [nio-2121-exec-2] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:40:46.237 DEBUG 12640 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:40:46.239 DEBUG 12640 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@14fde193]
+2026-01-16 00:40:46.243 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:40:46.250 DEBUG 12640 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:41:09.926  WARN 12640 --- [nio-2121-exec-4] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:41:09.927  WARN 12640 --- [nio-2121-exec-4] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:41:09.928 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:41:09.928 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:41:09.929 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:41:09.929 DEBUG 12640 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:41:09.931 DEBUG 12640 --- [nio-2121-exec-4] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@61072ee8]
+2026-01-16 00:41:09.932  INFO 12640 --- [nio-2121-exec-4] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:41:09.938 DEBUG 12640 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:41:09.939 DEBUG 12640 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@126217b1]
+2026-01-16 00:41:09.941 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:41:09.942 DEBUG 12640 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:41:09.950  WARN 12640 --- [nio-2121-exec-5] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:41:09.952  WARN 12640 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:41:09.955 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:41:09.956 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:41:09.957 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:41:09.958 DEBUG 12640 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:41:09.960 DEBUG 12640 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:41:09.961 DEBUG 12640 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@4e1cb6a0]
+2026-01-16 00:41:09.963 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:41:09.963 DEBUG 12640 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:41:34.142  WARN 12640 --- [nio-2121-exec-6] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:41:34.142  WARN 12640 --- [nio-2121-exec-6] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:41:34.143 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:41:34.144 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:41:34.145 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:41:34.146 DEBUG 12640 --- [nio-2121-exec-6] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:41:34.149 DEBUG 12640 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:41:34.150 DEBUG 12640 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@45e1889f]
+2026-01-16 00:41:34.151 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:41:34.152 DEBUG 12640 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:41:48.265  WARN 12640 --- [nio-2121-exec-7] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:41:48.265  WARN 12640 --- [nio-2121-exec-7] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:41:48.266 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:41:48.266 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:41:48.267 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:41:48.267 DEBUG 12640 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:41:48.270 DEBUG 12640 --- [nio-2121-exec-7] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@714cb831]
+2026-01-16 00:41:48.271  INFO 12640 --- [nio-2121-exec-7] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:41:48.368 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:41:48.369 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@7fdc6a00]
+2026-01-16 00:41:48.371 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:41:48.371 DEBUG 12640 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:41:48.380  WARN 12640 --- [nio-2121-exec-8] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:41:48.381  WARN 12640 --- [nio-2121-exec-8] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:41:48.382 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:41:48.383 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:41:48.383 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:41:48.384 DEBUG 12640 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:41:48.387 DEBUG 12640 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:41:48.387 DEBUG 12640 --- [nio-2121-exec-8] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@295c969c]
+2026-01-16 00:41:48.389 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:41:48.391 DEBUG 12640 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:15.727  WARN 12640 --- [nio-2121-exec-9] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:42:15.729  WARN 12640 --- [nio-2121-exec-9] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:42:15.729 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /employees/1526010001
+2026-01-16 00:42:15.730 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /employees/1526010001
+2026-01-16 00:42:15.730 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/employees/1526010001", parameters={}
+2026-01-16 00:42:15.731 DEBUG 12640 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.employeesController#getNoRekening(String)
+2026-01-16 00:42:15.735 DEBUG 12640 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:42:15.735 DEBUG 12640 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@26bc376d]
+2026-01-16 00:42:15.737 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:15.739 DEBUG 12640 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:33.189  WARN 12640 --- [io-2121-exec-10] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:42:33.190  WARN 12640 --- [io-2121-exec-10] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:42:33.190 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Securing POST /api/transaksi/create
+2026-01-16 00:42:33.191 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Secured POST /api/transaksi/create
+2026-01-16 00:42:33.192 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : POST "/api/transaksi/create", parameters={}
+2026-01-16 00:42:33.193 DEBUG 12640 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#create(TransaksiRequestDto)
+2026-01-16 00:42:33.195 DEBUG 12640 --- [io-2121-exec-10] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.TransaksiRequestDto@4d14c0a0]
+2026-01-16 00:42:33.196  INFO 12640 --- [io-2121-exec-10] transaksiService                         : Membuat transaksi untuk noRekening: 1526010001
+2026-01-16 00:42:33.200 DEBUG 12640 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:42:33.201 DEBUG 12640 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@2e4817b9]
+2026-01-16 00:42:33.202 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:33.204 DEBUG 12640 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:33.215  WARN 12640 --- [nio-2121-exec-1] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:42:33.215  WARN 12640 --- [nio-2121-exec-1] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:42:33.216 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:42:33.216 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:42:33.217 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:42:33.217 DEBUG 12640 --- [nio-2121-exec-1] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:42:33.224 DEBUG 12640 --- [nio-2121-exec-1] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:42:33.225 DEBUG 12640 --- [nio-2121-exec-1] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@3d26de07]
+2026-01-16 00:42:33.229 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:33.230 DEBUG 12640 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:52.620 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:42:52.621 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:42:52.622 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:42:52.623 DEBUG 12640 --- [nio-2121-exec-2] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:42:52.626 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:52.627 DEBUG 12640 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:56.093 DEBUG 12640 --- [nio-2121-exec-3] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:42:56.093 DEBUG 12640 --- [nio-2121-exec-3] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:42:56.094 DEBUG 12640 --- [nio-2121-exec-3] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:42:56.095 DEBUG 12640 --- [nio-2121-exec-3] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:42:56.179 DEBUG 12640 --- [nio-2121-exec-3] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:42:56.214 DEBUG 12640 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:56.215 DEBUG 12640 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:56.301 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:42:56.303 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:42:56.304 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:42:56.306 DEBUG 12640 --- [nio-2121-exec-4] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:42:56.309 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:56.309 DEBUG 12640 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:56.313 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:42:56.314 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:42:56.315 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:42:56.316 DEBUG 12640 --- [nio-2121-exec-5] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:42:56.323 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:56.324 DEBUG 12640 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:56.449 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:42:56.450 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:42:56.450 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:42:56.452 DEBUG 12640 --- [nio-2121-exec-6] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:42:56.458 DEBUG 12640 --- [nio-2121-exec-6] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:42:56.459 DEBUG 12640 --- [nio-2121-exec-6] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:42:56.461 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:42:56.461 DEBUG 12640 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:42:56.462 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:42:56.463  WARN 12640 --- [nio-2121-exec-7] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Thu Jan 15 23:42:42 WIB 2026
+2026-01-16 00:42:56.463 DEBUG 12640 --- [nio-2121-exec-6] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:42:56.464  WARN 12640 --- [nio-2121-exec-7] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:42:56.465 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:42:56.466 DEBUG 12640 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:42:56.466 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:42:56.467 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:42:56.466 DEBUG 12640 --- [nio-2121-exec-6] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:42:56 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:42:56.474 DEBUG 12640 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:42:56.476 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:42:56.480 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:42:56.481 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@3c8046db]
+2026-01-16 00:42:56.482 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:42:56.483 DEBUG 12640 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:01.138 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:43:01.141 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:43:01.143 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:43:01.144 DEBUG 12640 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:43:01.148 DEBUG 12640 --- [nio-2121-exec-8] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2026-01-16 00:43:01.178 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:43:01.179 DEBUG 12640 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:01.206 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:43:01.206 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:43:01.207 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:43:01.208 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:43:01.208 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:43:01.209 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:43:01.210 DEBUG 12640 --- [nio-2121-exec-9] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:43:01.210 DEBUG 12640 --- [io-2121-exec-10] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:43:01.214 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:43:01.214 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:43:01.215 DEBUG 12640 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:01.215 DEBUG 12640 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:01.234 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2026-01-16 00:43:01.235 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /.well-known/appspecific/com.chrome.devtools.json
+2026-01-16 00:43:01.235 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/.well-known/appspecific/com.chrome.devtools.json", parameters={}
+2026-01-16 00:43:01.236 DEBUG 12640 --- [nio-2121-exec-1] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:43:06.831 DEBUG 12640 --- [nio-2121-exec-1] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:43:06.833 DEBUG 12640 --- [nio-2121-exec-1] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .well-known/appspecific/com.chrome.devtools.json.]
+2026-01-16 00:43:06.834 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:43:06.834 DEBUG 12640 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:06.836 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:43:06.836 DEBUG 12640 --- [nio-2121-exec-1] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:43:06.838 DEBUG 12640 --- [nio-2121-exec-1] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:43:06.839 DEBUG 12640 --- [nio-2121-exec-1] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:43:06 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:43:06.841 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:43:06.976  WARN 12640 --- [nio-2121-exec-2] JwtTokenProvider                         : [JWT-PROVIDER] Token expired at Fri Jan 16 00:27:35 WIB 2026
+2026-01-16 00:43:06.979  WARN 12640 --- [nio-2121-exec-2] JwtAuthenticationFilter                  : [JWT-FILTER] ❌ Invalid or expired token
+2026-01-16 00:43:06.988 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:43:06.991 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:43:07.051 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:43:07.055 DEBUG 12640 --- [nio-2121-exec-2] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:43:07.060 DEBUG 12640 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:43:07.062 DEBUG 12640 --- [nio-2121-exec-2] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@570e0f22]
+2026-01-16 00:43:07.066 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:43:07.070 DEBUG 12640 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:35.711 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /login
+2026-01-16 00:43:35.712 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /login
+2026-01-16 00:43:35.712 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/login", parameters={}
+2026-01-16 00:43:35.713 DEBUG 12640 --- [nio-2121-exec-5] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:43:35.715 DEBUG 12640 --- [nio-2121-exec-5] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:43:35.715 DEBUG 12640 --- [nio-2121-exec-5] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource login.]
+2026-01-16 00:43:35.716 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:43:35.716 DEBUG 12640 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:43:35.717 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:43:35.718 DEBUG 12640 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2026-01-16 00:43:35.734 DEBUG 12640 --- [nio-2121-exec-5] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, text/html;q=0.8]
+2026-01-16 00:43:35.739 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:44:52.641 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Securing GET /
+2026-01-16 00:44:52.642 DEBUG 12640 --- [nio-2121-exec-8] FilterChainProxy                         : Secured GET /
+2026-01-16 00:44:52.643 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : GET "/", parameters={}
+2026-01-16 00:44:52.643 DEBUG 12640 --- [nio-2121-exec-8] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#index()
+2026-01-16 00:44:52.645 DEBUG 12640 --- [nio-2121-exec-8] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:44:52.670 DEBUG 12640 --- [nio-2121-exec-8] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:44:52.670 DEBUG 12640 --- [nio-2121-exec-8] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:44:52.742 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:44:52.743 DEBUG 12640 --- [nio-2121-exec-9] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:44:52.744 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:44:52.745 DEBUG 12640 --- [nio-2121-exec-9] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:44:52.748 DEBUG 12640 --- [nio-2121-exec-9] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:44:52.748 DEBUG 12640 --- [nio-2121-exec-9] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:44:52.749 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:44:52.749 DEBUG 12640 --- [nio-2121-exec-9] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:44:52.750 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:44:52.751 DEBUG 12640 --- [nio-2121-exec-9] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:44:52.754 DEBUG 12640 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:44:52.754 DEBUG 12640 --- [nio-2121-exec-9] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:44:52 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:44:52.756 DEBUG 12640 --- [nio-2121-exec-9] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:45:01.536 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Securing POST /api/auth/login
+2026-01-16 00:45:01.537 DEBUG 12640 --- [io-2121-exec-10] FilterChainProxy                         : Secured POST /api/auth/login
+2026-01-16 00:45:01.538 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : POST "/api/auth/login", parameters={}
+2026-01-16 00:45:01.539 DEBUG 12640 --- [io-2121-exec-10] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.LoginController#login(LoginRequestDto)
+2026-01-16 00:45:01.542 DEBUG 12640 --- [io-2121-exec-10] RequestResponseBodyMethodProcessor       : Read "application/json;charset=UTF-8" to [com.danaku.danaku.model.LoginRequestDto@7fc6720a]
+2026-01-16 00:45:01.658  INFO 12640 --- [io-2121-exec-10] JwtTokenProvider                         : [JWT-PROVIDER] Generating token for username=admin, userId=1
+2026-01-16 00:45:01.685 DEBUG 12640 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:45:01.685 DEBUG 12640 --- [io-2121-exec-10] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@2aa045fa]
+2026-01-16 00:45:01.690 DEBUG 12640 --- [io-2121-exec-10] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:45:01.692 DEBUG 12640 --- [io-2121-exec-10] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:03.756 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Securing GET /adminHome
+2026-01-16 00:45:03.757 DEBUG 12640 --- [nio-2121-exec-1] FilterChainProxy                         : Secured GET /adminHome
+2026-01-16 00:45:03.759 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : GET "/adminHome", parameters={}
+2026-01-16 00:45:03.759 DEBUG 12640 --- [nio-2121-exec-1] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#home()
+2026-01-16 00:45:03.761 DEBUG 12640 --- [nio-2121-exec-1] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:45:03.772 DEBUG 12640 --- [nio-2121-exec-1] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:45:03.772 DEBUG 12640 --- [nio-2121-exec-1] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:03.826 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Securing GET /css/adminHome.css
+2026-01-16 00:45:03.829 DEBUG 12640 --- [nio-2121-exec-2] FilterChainProxy                         : Secured GET /css/adminHome.css
+2026-01-16 00:45:03.830 DEBUG 12640 --- [nio-2121-exec-3] FilterChainProxy                         : Securing GET /js/adminHome.js
+2026-01-16 00:45:03.830 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : GET "/css/adminHome.css", parameters={}
+2026-01-16 00:45:03.832 DEBUG 12640 --- [nio-2121-exec-3] FilterChainProxy                         : Secured GET /js/adminHome.js
+2026-01-16 00:45:03.832 DEBUG 12640 --- [nio-2121-exec-3] DispatcherServlet                        : GET "/js/adminHome.js", parameters={}
+2026-01-16 00:45:03.833 DEBUG 12640 --- [nio-2121-exec-2] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:45:03.834 DEBUG 12640 --- [nio-2121-exec-3] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:45:03.837 DEBUG 12640 --- [nio-2121-exec-2] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:45:03.838 DEBUG 12640 --- [nio-2121-exec-2] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:03.838 DEBUG 12640 --- [nio-2121-exec-3] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:45:03.853 DEBUG 12640 --- [nio-2121-exec-3] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:03.904 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:45:03.905 DEBUG 12640 --- [nio-2121-exec-4] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:45:03.906 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:45:03.908 DEBUG 12640 --- [nio-2121-exec-4] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:45:03.912 DEBUG 12640 --- [nio-2121-exec-4] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:45:03.912  INFO 12640 --- [nio-2121-exec-5] JwtTokenProvider                         : [JWT-PROVIDER] Token valid for subject=admin, expiresAt=Fri Jan 16 01:45:01 WIB 2026
+2026-01-16 00:45:03.913 DEBUG 12640 --- [nio-2121-exec-4] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:45:03.914 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:45:03.915 DEBUG 12640 --- [nio-2121-exec-4] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:03.916 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:45:03.916  INFO 12640 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ Token valid for username=admin
+2026-01-16 00:45:03.917 DEBUG 12640 --- [nio-2121-exec-4] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:45:03.920 DEBUG 12640 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:45:03.921 DEBUG 12640 --- [nio-2121-exec-4] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:45:03 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:45:03.924 DEBUG 12640 --- [nio-2121-exec-4] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404
+2026-01-16 00:45:03.980  INFO 12640 --- [nio-2121-exec-5] JwtAuthenticationFilter                  : [JWT-FILTER] 🔐 SecurityContext set for user=admin
+2026-01-16 00:45:03.981 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Securing GET /api/transaksi/saldo
+2026-01-16 00:45:03.982 DEBUG 12640 --- [nio-2121-exec-5] FilterChainProxy                         : Secured GET /api/transaksi/saldo
+2026-01-16 00:45:03.983 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : GET "/api/transaksi/saldo", parameters={}
+2026-01-16 00:45:03.983 DEBUG 12640 --- [nio-2121-exec-5] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.transaksiController#getSaldoAll()
+2026-01-16 00:45:03.986 DEBUG 12640 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2026-01-16 00:45:03.987 DEBUG 12640 --- [nio-2121-exec-5] HttpEntityMethodProcessor                : Writing [com.danaku.danaku.model.GeneralResponseDto@a26845c]
+2026-01-16 00:45:03.988 DEBUG 12640 --- [nio-2121-exec-5] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:45:03.989 DEBUG 12640 --- [nio-2121-exec-5] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:12.478 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Securing GET /
+2026-01-16 00:45:12.478 DEBUG 12640 --- [nio-2121-exec-6] FilterChainProxy                         : Secured GET /
+2026-01-16 00:45:12.479 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : GET "/", parameters={}
+2026-01-16 00:45:12.479 DEBUG 12640 --- [nio-2121-exec-6] RequestMappingHandlerMapping             : Mapped to com.danaku.danaku.controller.HomeController#index()
+2026-01-16 00:45:12.480 DEBUG 12640 --- [nio-2121-exec-6] ContentNegotiatingViewResolver           : Selected 'text/html' given [text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8]
+2026-01-16 00:45:12.488 DEBUG 12640 --- [nio-2121-exec-6] DispatcherServlet                        : Completed 200 OK
+2026-01-16 00:45:12.489 DEBUG 12640 --- [nio-2121-exec-6] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:12.528 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Securing GET /favicon.ico
+2026-01-16 00:45:12.529 DEBUG 12640 --- [nio-2121-exec-7] FilterChainProxy                         : Secured GET /favicon.ico
+2026-01-16 00:45:12.529 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : GET "/favicon.ico", parameters={}
+2026-01-16 00:45:12.530 DEBUG 12640 --- [nio-2121-exec-7] SimpleUrlHandlerMapping                  : Mapped to ResourceHttpRequestHandler [classpath [static/], ServletContext [/]]
+2026-01-16 00:45:12.532 DEBUG 12640 --- [nio-2121-exec-7] ResourceHttpRequestHandler               : Resource not found
+2026-01-16 00:45:12.535 DEBUG 12640 --- [nio-2121-exec-7] DefaultHandlerExceptionResolver          : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-01-16 00:45:12.538 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : Completed 404 NOT_FOUND
+2026-01-16 00:45:12.540 DEBUG 12640 --- [nio-2121-exec-7] AnonymousAuthenticationFilter            : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-16 00:45:12.541 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : "ERROR" dispatch for GET "/error", parameters={}
+2026-01-16 00:45:12.542 DEBUG 12640 --- [nio-2121-exec-7] RequestMappingHandlerMapping             : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-01-16 00:45:12.545 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Using 'application/json;q=0.5', given [image/avif, image/webp, image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5] and supported [application/json, application/*+json]
+2026-01-16 00:45:12.549 DEBUG 12640 --- [nio-2121-exec-7] HttpEntityMethodProcessor                : Writing [{timestamp=Fri Jan 16 00:45:12 WIB 2026, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2026-01-16 00:45:12.555 DEBUG 12640 --- [nio-2121-exec-7] DispatcherServlet                        : Exiting from "ERROR" dispatch, status 404

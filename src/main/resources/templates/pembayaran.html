@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Pembiayaan - Mobile Banking</title>
+    <!-- Gunakan path absolut seperti di pembiayaan.html -->
+    <link rel="stylesheet" href="/css/adminHome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Script Validasi Role (sama seperti pembiayaan.html) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userData = localStorage.getItem('userData');
+            
+            console.log('User data from localStorage:', userData);
+            
+            if (!userData) {
+                window.location.href = '/';
+                return;
+            }
+            
+            try {
+                const parsedData = JSON.parse(userData);
+                console.log('Parsed data:', parsedData);
+                
+                let userRole = '';
+                
+                if (parsedData.role) {
+                    userRole = parsedData.role;
+                } else if (parsedData.transactionDetail?.role) {
+                    userRole = parsedData.transactionDetail.role;
+                } else if (parsedData.data?.role) {
+                    userRole = parsedData.data.role;
+                }
+                
+                console.log('User role found:', userRole);
+                
+                // Hanya Administrator dan Operator yang boleh mengakses pembayaran
+                if (!['Administrator', 'Operator'].includes(userRole)) {
+                    alert('Akses ditolak. Halaman ini hanya untuk Administrator/Operator.');
+                    window.location.href = '/adminHome';
+                    return;
+                }
+                
+                console.log('Access granted for:', userRole);
+                
+            } catch (error) {
+                console.error('Error parsing user data:', error);
+                alert('Error memproses data user. Silakan login kembali.');
+                window.location.href = '/';
+            }
+        });
+    </script>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="header-top">
+            <button class="menu-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">
+                <i class="fas fa-money-bill-wave"></i>
+                <div class="header-title-text">
+                    <span class="app-name">Bayar Pembiayaan</span>
+                    <span class="app-tagline">Sistem Pembayaran Angsuran</span>
+                </div>
+            </div>
+            <button class="notification-btn" onclick="openNotifications()">
+                <i class="fas fa-bell"></i>
+                <span class="badge">3</span>
+            </button>
+        </div>
+        <div class="user-welcome">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-greeting">
+                <h3>Selamat datang,</h3>
+                <p id="userName">Administrator</p>
+                <small><i class="fas fa-calendar-alt me-1"></i> <span id="currentDate"></span></small>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Search Form -->
+        <div class="container mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-search me-2"></i>Cari Pembiayaan</h5>
+                </div>
+                <div class="card-body">
+                    <form id="searchPembiayaanForm">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="noPembiayaan"><i class="fas fa-hashtag me-2"></i>Nomor Pembiayaan</label>
+                                    <div class="input-group">
+                                        <input type="text" 
+                                               class="form-control" 
+                                               id="noPembiayaan" 
+                                               placeholder="Contoh: MJD0000000007"
+                                               required>
+                                        <button class="btn btn-primary" type="button" id="searchPembiayaan">
+                                            <i class="fas fa-search me-2"></i>Cari
+                                        </button>
+                                    </div>
+                                    <small class="text-muted">Masukkan nomor pembiayaan lengkap</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>&nbsp;</label>
+                                    <button type="button" class="btn btn-outline-secondary w-100" id="scanQR">
+                                        <i class="fas fa-qrcode me-2"></i>Scan QR Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="pembiayaanResult" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- Pembiayaan Detail -->
+            <div id="pembiayaanDetail" style="display: none;"></div>
+
+            <!-- Angsuran Terdekat -->
+            <div id="angsuranTerdekat" class="mt-4"></div>
+
+            <!-- Daftar Angsuran -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-list-ol me-2"></i>Daftar Angsuran</h5>
+                </div>
+                <div class="card-body">
+                    <div id="angsuranTable"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Payment Modal -->
+   <!-- Payment Modal -->
+<div id="pembayaranModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fas fa-money-bill-wave me-2"></i>Bayar Angsuran</h3>
+            <button class="close-modal" onclick="closePaymentModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div id="paymentDetails"></div>
+            
+            <form id="paymentForm">
+                <div class="form-section">
+                    <h4><i class="fas fa-credit-card me-2"></i>Metode Pembayaran</h4>
+                    <div class="form-group">
+                        <select class="form-control" id="paymentType" required>
+                            <option value="">Pilih metode pembayaran</option>
+                            <option value="tunai">Tunai</option>
+                            <option value="transfer">Transfer Bank</option>
+                            <option value="qris">QRIS</option>
+                            <option value="debit">Kartu Debit</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h4><i class="fas fa-calculator me-2"></i>Jumlah Pembayaran</h4>
+                    <div class="form-group">
+                        <div class="input-with-prefix">
+                            <span class="input-prefix">Rp</span>
+                            <input type="text" 
+                                   class="form-control rupiah-formatted" 
+                                   id="totalBayar" 
+                                   required
+                                   placeholder="0"
+                                   readonly>
+                            <!-- Input hidden untuk menyimpan nilai asli -->
+                            <input type="hidden" id="totalBayarRaw">
+                        </div>
+                        <small class="form-text">Jumlah total yang harus dibayarkan</small>
+                    </div>
+                    
+                    <!-- Tampilkan rincian pembayaran -->
+                    <div class="payment-breakdown" id="paymentBreakdown" style="display: none;">
+                        <div class="breakdown-item">
+                            <span>Pokok:</span>
+                            <span id="pokokAmount" class="amount"></span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Bunga:</span>
+                            <span id="bungaAmount" class="amount"></span>
+                        </div>
+                        <div class="breakdown-item total">
+                            <span><strong>Total:</strong></span>
+                            <span id="totalAmount" class="amount"><strong></strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-info">
+                    <small>
+                        <i class="fas fa-info-circle me-2"></i>
+                        Pastikan jumlah pembayaran sesuai dengan tagihan
+                    </small>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" onclick="closePaymentModal()">
+                        <i class="fas fa-times me-2"></i>Batal
+                    </button>
+                    <button type="button" class="btn-primary" onclick="processPayment()" id="submitPayment">
+                        <i class="fas fa-check me-2"></i>Bayar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="nav-header">
+            <div class="nav-user">
+                <div class="nav-user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="nav-user-info">
+                    <strong id="navUserName">Administrator</strong>
+                    <small id="navUserRole">Admin Pembayaran</small>
+                </div>
+            </div>
+            <button class="close-nav" onclick="toggleNav()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="/adminHome" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard Utama</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="/pembiayaan" class="nav-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Pembiayaan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="/pembayaran" class="nav-item active">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Pembayaran</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="#" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Laporan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <div class="nav-divider"></div>
+            
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Keluar</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="nav-footer">
+            <p>Danaku App v1.0.0</p>
+            <small>© 2024 All rights reserved</small>
+        </div>
+    </nav>
+
+    <!-- Mobile Footer -->
+    <footer class="mobile-footer">
+        <nav class="footer-nav">
+            <a href="/adminHome" class="footer-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="/pembiayaan" class="footer-nav-item">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Pembiayaan</span>
+            </a>
+            <a href="/pembayaran" class="footer-nav-item active">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Bayar</span>
+            </a>
+            <a href="#" class="footer-nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+    </footer>
+
+    <!-- Gunakan path absolut untuk JavaScript -->
+    <script src="/js/pembayaran.js"></script>
+    <script>
+        // Set current date
+        const currentDate = new Date();
+        document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('id-ID', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        
+        // Set user name from localStorage
+        const userData = localStorage.getItem('userData');
+        if (userData) {
+            try {
+                const parsedData = JSON.parse(userData);
+                const userName = parsedData.name || parsedData.username || 'Administrator';
+                const userRole = parsedData.role || 'Administrator';
+                
+                document.getElementById('userName').textContent = userName;
+                document.getElementById('navUserName').textContent = userName;
+                document.getElementById('navUserRole').textContent = userRole;
+            } catch (e) {
+                console.error('Error parsing user data:', e);
+            }
+        }
+        
+        // Toggle navigation
+        function toggleNav() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('active');
+        }
+        
+        function closePaymentModal() {
+            document.getElementById('pembayaranModal').style.display = 'none';
+        }
+        
+        function openNotifications() {
+            alert('Fitur notifikasi belum tersedia');
+        }
+        
+        function logout() {
+            localStorage.removeItem('userData');
+            localStorage.removeItem('authToken');
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

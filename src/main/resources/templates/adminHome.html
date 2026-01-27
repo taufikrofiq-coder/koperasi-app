@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Koperasi Mobile</title>
+    <link rel="stylesheet" href="/css/adminHome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <!-- Header Mobile Banking Style -->
+    <header class="mobile-header">
+        <div class="header-top">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-title">
+                <i class="fas fa-shield-alt"></i>
+                <div class="header-title-text">
+                    <span class="app-name">Aplikasi Koperasi Danaku</span>
+                    <!-- <span class="app-tagline">Dana Anda aman bersama kami</span> -->
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="notification-btn" id="notificationBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">3</span>
+                </button>
+            </div>
+        </div>
+        <div class="user-welcome">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-greeting">
+                <h3>Selamat Datang</h3>
+                <p id="userDisplayName">Administrator</p>
+                <small id="userRoleDisplay">Administrator</small>
+            </div>
+        </div>
+    </header>
+
+    <!-- Saldo Card (Mobile Banking Style) -->
+    <div class="saldo-container">
+        <div class="saldo-card">
+            <div class="saldo-header">
+                <div class="saldo-title">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Saldo Saya</h3>
+                </div>
+                <button class="saldo-refresh" id="refreshSaldoBtn">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+            <div class="saldo-amount" id="saldoSaya">
+                <div class="loading-saldo">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Memuat saldo...</span>
+                </div>
+            </div>
+            <div class="saldo-details">
+                <div class="detail-item">
+                    <small>No. Rekening</small>
+                    <span></span>
+                </div>
+                <div class="detail-item">
+                    <small>Update Terakhir</small>
+                    <span id="saldoUpdateTime">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-actions-grid" id="quickActionsSection">
+        <h3 class="section-title">Layanan Cepat</h3>
+        <div class="actions-container" id="quickActionsContainer">
+            <button class="action-card" id="addUserBtn">
+                <div class="action-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <span class="action-label">Tambah User</span>
+            </button>
+            <button class="action-card" id="newTransaksiBtn">
+                <div class="action-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <span class="action-label">Transaksi</span>
+            </button>
+            <button class="action-card" id="managePembiayaanBtn">
+                <div class="action-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <span class="action-label">Pembiayaan</span>
+            </button>
+           <button class="action-card" id="viewHistoryBtn">
+            <div class="action-icon">
+                <i class="fas fa-history"></i>
+            </div>
+            <span class="action-label">Riwayat</span>
+        </button>
+        </div>
+    </div>
+  
+    <!-- Stats Grid -->
+    <div class="stats-section">
+        <h3 class="section-title">Statistik Koperasi</h3>
+        <div class="stats-grid-mobile">
+            <div class="stat-card-mobile">
+                <div class="stat-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="stat-content">
+                    <h4>Dana Koperasi</h4>
+                    <div class="stat-number" id="totalSaldo">Rp 0</div>
+                    <small class="stat-note">Update: <span id="lastUpdate">-</span></small>
+                </div>
+            </div>
+            <div class="stat-card-mobile">
+                <div class="stat-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="stat-content">
+                    <h4>Laba / Rugi</h4>
+                    <div class="stat-number" id="todayActivity">0</div>
+                    <small class="stat-note">Laba / Rugi</small>
+                </div>
+            </div>
+            <div class="stat-card-mobile">
+                <div class="stat-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="stat-content">
+                    <h4>Pembiayaan Aktif</h4>
+                    <div class="stat-number" id="totalPembiayaan2">Rp 0</div>
+                    <small class="stat-note">Dalam proses</small>
+                </div>
+            </div>
+            <div class="stat-card-mobile">
+                <div class="stat-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="stat-content">
+                    <h4>Anggota Aktif</h4>
+                    <div class="stat-number" id="activeUsers">0</div>
+                    <small class="stat-note">Total anggota</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Info - HAPUS SATU YANG DUPLIKAT -->
+    <div class="system-info-card">
+        <h3 class="section-title">Status Sistem</h3>
+        <div class="system-status">
+            <div class="status-item">
+                <div class="status-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="status-details">
+                    <span class="status-label">Server Koperasi</span>
+                    <span class="status-value active">Online</span>
+                </div>
+            </div>
+            <div class="status-item">
+                <div class="status-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="status-details">
+                    <span class="status-label">Keamanan</span>
+                    <span class="status-value secure">Aman</span>
+                </div>
+            </div>
+            <div class="status-item">
+                <div class="status-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="status-details">
+                    <span class="status-label">Waktu Sistem</span>
+                    <span class="status-value" id="systemTime">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Menu (Hidden by default on mobile) -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="nav-header">
+            <div class="nav-user">
+                <div class="nav-user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="nav-user-info">
+                    <strong id="mobileUserName">Administrator</strong>
+                    <small id="mobileUserRole">Administrator</small>
+                </div>
+            </div>
+            <button class="close-nav" id="closeNavBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="#" class="nav-item active" id="dashboardBtn">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <!-- Menu untuk Administrator -->
+            <div class="admin-only-menu" id="adminMenu">
+                <a href="#" class="nav-item" id="userBtn">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Kelola User</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="nav-item" id="transaksiBtn">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Transaksi</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="nav-item" id="pembiayaanBtn">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>Pembiayaan</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="nav-item" id="reportBtn">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Laporan</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+            
+            <div class="nav-divider"></div>
+            
+            <a href="#" class="nav-item" id="settingsBtn">
+                <i class="fas fa-cog"></i>
+                <span>Pengaturan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <a href="#" class="nav-item" id="helpBtn">
+                <i class="fas fa-question-circle"></i>
+                <span>Bantuan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <button class="nav-item logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="nav-footer">
+            <small>Admin Koperasi v1.0</small>
+        </div>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="mobile-footer">
+        <div class="footer-nav">
+            <a href="#" class="footer-nav-item active" id="footerHomeBtn">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#" class="footer-nav-item" id="footerTransaksiBtn">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Transaksi</span>
+            </a>
+            <a href="#" class="footer-nav-item" id="footerHistoryBtn">
+                <i class="fas fa-history"></i>
+                <span>Riwayat</span>
+            </a>
+            <a href="#" class="footer-nav-item" id="footerMoreBtn">
+                <i class="fas fa-ellipsis-h"></i>
+                <span>Lainnya</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Modal untuk Tambah User -->
+    <div class="modal" id="addUserModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-plus"></i> Tambah User Baru</h3>
+                <button class="close-modal" id="closeUserModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="addUserForm">
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="newUsername">Username *</label>
+                            <input type="text" id="newUsername" class="form-control" required 
+                                   placeholder="Masukkan username" minlength="3" maxlength="50">
+                            <small class="form-text">Minimal 3 karakter</small>
+                        </div>
+                        <div class="form-group half">
+                            <label for="newPassword">Password *</label>
+                            <input type="password" id="newPassword" class="form-control" required 
+                                   placeholder="Masukkan password" minlength="6">
+                            <small class="form-text">Minimal 6 karakter</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newNama">Nama Lengkap *</label>
+                        <input type="text" id="newNama" class="form-control" required 
+                               placeholder="Masukkan nama lengkap">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="newTelp">Nomor Telepon</label>
+                            <input type="tel" id="newTelp" class="form-control" 
+                                   placeholder="08123456789" pattern="[0-9]*">
+                            <small class="form-text">Hanya angka</small>
+                        </div>
+                        <div class="form-group half">
+                            <label for="newRole">Role *</label>
+                            <select id="newRole" class="form-control" required>
+                                <option value="">Pilih Role</option>
+                                <option value="Administrator">Administrator</option>
+                                <option value="Operator">Operator</option>
+                                <option value="Viewer">Viewer</option>
+                                <option value="Anggota">Anggota</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newAlamat">Alamat</label>
+                        <textarea id="newAlamat" class="form-control" rows="2" 
+                                  placeholder="Masukkan alamat lengkap"></textarea>
+                    </div>
+                    
+                    <div class="form-info">
+                        <small><i class="fas fa-info-circle"></i> Field dengan tanda * wajib diisi</small>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn-secondary" id="cancelUserBtn">Batal</button>
+                        <button type="submit" class="btn-primary" id="saveUserBtn">
+                            <i class="fas fa-save"></i> Simpan User
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal untuk Transaksi -->
+    <div class="modal" id="transaksiModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exchange-alt"></i> Transaksi Baru</h3>
+                <button class="close-modal" id="closeTransaksiModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="transaksiForm">
+                    <!-- Section 1: Data Rekening -->
+                    <div class="form-section">
+                        <h4><i class="fas fa-credit-card"></i> Data Rekening</h4>
+                        <div class="form-group">
+                            <label for="noRekening">No Rekening *</label>
+                            <div class="input-with-button">
+                                <input type="text" id="noRekening" class="form-control" required 
+                                       placeholder="Masukkan no rekening" maxlength="20">
+                                <button type="button" class="btn-secondary small" id="searchRekeningBtn">
+                                    <i class="fas fa-search"></i> Cari
+                                </button>
+                            </div>
+                            <small class="form-text">Masukkan no rekening dan klik tombol cari atau tekan Enter</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nama">Nama Nasabah</label>
+                            <input type="text" id="nama" class="form-control" readonly 
+                                   placeholder="Nama akan muncul otomatis">
+                            <div class="customer-info" id="customerInfo" style="display: none;">
+                                <div class="customer-detail">
+                                    <i class="fas fa-user"></i>
+                                    <span id="customerName">-</span>
+                                </div>
+                                <div class="customer-detail">
+                                    <i class="fas fa-phone"></i>
+                                    <span id="customerPhone">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 2: Detail Transaksi -->
+                    <div class="form-section">
+                        <h4><i class="fas fa-file-invoice-dollar"></i> Detail Transaksi</h4>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="transaksiType">Jenis Transaksi *</label>
+                                <select id="transaksiType" class="form-control" required>
+                                    <option value="">Pilih Jenis</option>
+                                    <option value="deposit">Setor Dana</option>
+                                    <option value="withdraw">Penarikan</option>
+                                </select>
+                            </div>
+                            <div class="form-group half">
+                                <label for="transaksiAmount">Jumlah *</label>
+                                <div class="input-with-prefix">
+                                    <span class="input-prefix">Rp</span>
+                                    <input type="text" id="transaksiAmount" class="form-control amount-input" required 
+                                           placeholder="0" inputmode="numeric">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CREDIT Field - HANYA tampil untuk SETOR DANA (Deposit) -->
+                        <div class="form-group conditional-field" id="creditGroup" style="display: none;">
+                            <div class="field-header">
+                                <label for="credit">Jumlah Setoran (Kredit) *</label>
+                                <span class="type-badge type-deposit">Setor Dana</span>
+                            </div>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">Rp</span>
+                                <input type="text" id="credit" class="form-control amount-input" 
+                                       placeholder="0" inputmode="numeric" readonly>
+                            </div>
+                            <small class="form-text">Jumlah yang akan ditambahkan ke rekening</small>
+                        </div>
+                        
+                        <!-- DEBET Field - HANYA tampil untuk PENARIKAN (Withdraw) -->
+                        <div class="form-group conditional-field" id="debetGroup" style="display: none;">
+                            <div class="field-header">
+                                <label for="debet">Jumlah Penarikan (Debet) *</label>
+                                <span class="type-badge type-withdraw">Penarikan</span>
+                            </div>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">Rp</span>
+                                <input type="text" id="debet" class="form-control amount-input" 
+                                       placeholder="0" inputmode="numeric" readonly>
+                            </div>
+                            <small class="form-text">Jumlah yang akan ditarik dari rekening</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="transaksiDescription">Keterangan *</label>
+                            <textarea id="transaksiDescription" class="form-control" rows="3" 
+                                      placeholder="Masukkan keterangan transaksi"
+                                      required></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 3: Ringkasan -->
+                    <div class="form-section">
+                        <div class="transaction-summary" id="transactionSummary" style="display: none;">
+                            <h4><i class="fas fa-receipt"></i> Ringkasan Transaksi</h4>
+                            <div class="summary-grid">
+                                <div class="summary-item">
+                                    <span>No Rekening:</span>
+                                    <strong id="summaryNoRekening">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Nama:</span>
+                                    <strong id="summaryNama">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Jenis:</span>
+                                    <strong id="summaryType">-</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Jumlah:</span>
+                                    <strong id="summaryAmount" class="amount-display">Rp 0</strong>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Keterangan:</span>
+                                    <strong id="summaryDescription">-</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-info">
+                        <small><i class="fas fa-info-circle"></i> Pastikan semua data sudah benar sebelum memproses transaksi</small>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn-secondary" id="cancelTransaksiBtn">Batal</button>
+                        <button type="submit" class="btn-primary" id="saveTransaksiBtn">
+                            <i class="fas fa-check"></i> Proses Transaksi
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/adminHome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>

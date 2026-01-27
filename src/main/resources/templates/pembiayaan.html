@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembiayaan - Danaku App</title>
+    <link rel="stylesheet" href="/css/adminHome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Script Validasi Role -->
+   <script>
+    // Cek apakah user sudah login dan memiliki role Administrator
+    document.addEventListener('DOMContentLoaded', function() {
+        const userData = localStorage.getItem('userData');
+        
+        console.log('User data from localStorage:', userData); // Debug
+        
+        if (!userData) {
+            // Jika tidak ada data user, redirect ke login
+            window.location.href = '/';
+            return;
+        }
+        
+        try {
+            const parsedData = JSON.parse(userData);
+            console.log('Parsed data:', parsedData); // Debug
+            
+            // CEK DUA KEMUNGKINAN STRUKTUR DATA:
+            // 1. Jika data disimpan langsung sebagai object dengan property role
+            // 2. Jika data disimpan dalam struktur response API
+            let userRole = '';
+            
+            if (parsedData.role) {
+                // Jika role langsung ada di root object
+                userRole = parsedData.role;
+                console.log('Role from root:', userRole);
+            } else if (parsedData.transactionDetail?.role) {
+                // Jika role ada di dalam transactionDetail
+                userRole = parsedData.transactionDetail.role;
+                console.log('Role from transactionDetail:', userRole);
+            } else if (parsedData.data?.role) {
+                // Jika role ada di dalam data
+                userRole = parsedData.data.role;
+                console.log('Role from data:', userRole);
+            }
+            
+            // Debug: Tampilkan role yang ditemukan
+            console.log('User role found:', userRole);
+            
+            // Hanya Administrator yang boleh mengakses
+            if (userRole !== 'Administrator') {
+                alert('Akses ditolak. Halaman ini hanya untuk Administrator.');
+                window.location.href = '/adminHome';
+                return;
+            }
+            
+            // Jika berhasil, lanjutkan loading halaman
+            console.log('Access granted for Administrator');
+            
+        } catch (error) {
+            console.error('Error parsing user data:', error);
+            alert('Error memproses data user. Silakan login kembali.');
+            window.location.href = '/';
+        }
+    });
+</script>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="header-top">
+            <button class="menu-toggle" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="header-title">
+                <i class="fas fa-hand-holding-usd"></i>
+                <div class="header-title-text">
+                    <span class="app-name">DANAKU APP</span>
+                    <span class="app-tagline">Manajemen Pembiayaan</span>
+                </div>
+            </div>
+            
+            <button class="notification-btn" onclick="openNotifications()">
+                <i class="fas fa-bell"></i>
+                <span class="badge">2</span>
+            </button>
+        </div>
+        
+        <div class="user-welcome">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-greeting">
+                <h3>Pembiayaan</h3>
+                <p>Manajemen Pinjaman</p>
+                <small id="currentDate">Hari ini</small>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Quick Actions -->
+        <section class="quick-actions-grid">
+            <div class="section-title">
+                <i class="fas fa-bolt"></i>
+                Aksi Cepat
+            </div>
+            <div class="actions-container">
+                <button class="action-card" onclick="openCreateModal()" data-role="admin">
+                    <div class="action-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <span class="action-label">Buat Baru</span>
+                </button>
+                
+                <button class="action-card" onclick="openInquiryModal()" data-role="operator">
+                    <div class="action-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <span class="action-label">Cari Data</span>
+                </button>
+                
+                <button class="action-card" onclick="openSimulasiModal()" data-role="viewer">
+                    <div class="action-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <span class="action-label">Simulasi</span>
+                </button>
+                
+                <button class="action-card" onclick="loadAllPembiayaan()" data-role="anggota">
+                    <div class="action-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <span class="action-label">Lihat Semua</span>
+                </button>
+                
+            </div>
+        </section>
+
+        <!-- Data Section -->
+        <section class="stats-section">
+            <div class="section-title">
+                <i class="fas fa-chart-line"></i>
+                Data Pembiayaan
+            </div>
+            <div class="stats-grid-mobile">
+                <div class="stat-card-mobile">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Total Aktif</h4>
+                        <div class="stat-number" id="totalAktif">0</div>
+                        <div class="stat-note">Pinjaman berjalan</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card-mobile">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Total Lunas</h4>
+                        <div class="stat-number" id="totalLunas">0</div>
+                        <div class="stat-note">Pinjaman selesai</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card-mobile">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h4>Total Menunggu</h4>
+                        <div class="stat-number" id="totalMenunggu">0</div>
+                        <div class="stat-note">Menunggu persetujuan</div>
+                    </div>
+                </div>
+                 <button class="action-card" onclick="window.location.href='/pembayaran'" 
+                    style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+                <div class="action-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <span class="action-label">Bayar Angsuran</span>
+            </button>
+            </div>
+        </section>
+
+        <!-- Data Table Section -->
+        <section class="system-info-card" style="margin-top: 20px;">
+            <div class="section-title" style="margin-bottom: 15px;">
+                <i class="fas fa-table"></i>
+                Daftar Pembiayaan
+            </div>
+            <div class="table-responsive">
+                <div id="pembiayaanTable">
+                    <!-- Data will be loaded here -->
+                    <div class="loading-saldo" style="padding: 20px;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Memuat data pembiayaan...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL: Create Pembiayaan -->
+    <div id="createModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus-circle"></i> Buat Pembiayaan Baru</h3>
+                <button class="close-modal" onclick="closeCreateModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="createForm">
+                    <div class="form-section">
+                        <h4><i class="fas fa-user"></i> Data Nasabah</h4>
+                        <div class="form-group">
+                            <label for="customerId">No Rekening *</label>
+                            <input type="text"
+                                id="customerId"
+                                class="form-control"
+                                placeholder="Masukkan No Rekening"
+                                required>
+                                <button type="button" 
+                                        class="btn-secondary small" 
+                                        onclick="searchCustomer()">
+                                    <i class="fas fa-search"></i> Cari
+                                </button>
+                        </div>
+                        
+                        <div id="customerInfo" class="customer-info" style="display: none;">
+                            <div class="customer-detail">
+                                <i class="fas fa-user"></i>
+                                <span id="customerName">Nama Nasabah</span>
+                            </div>
+                            <div class="customer-detail">
+                                <i class="fas fa-id-card"></i>
+                                <span id="customerNIK">NIK: -</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4><i class="fas fa-money-bill-wave"></i> Detail Pembiayaan</h4>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="amount">Jumlah Pinjaman *</label>
+                                <div class="input-with-prefix">
+                                    <span class="input-prefix">Rp</span>
+                                    <input type="number" 
+                                           id="amount" 
+                                           class="form-control" 
+                                           placeholder="10.000.000"
+                                           required>
+                                </div>
+                            </div>
+                            <div class="form-group half">
+                                <label for="tenor">Tenor (Bulan) *</label>
+                                <select id="tenor" class="form-control" required>
+                                    <option value="">Pilih tenor</option>
+                                    <option value="6">6 Bulan</option>
+                                    <option value="12">12 Bulan</option>
+                                    <option value="18">18 Bulan</option>
+                                    <option value="24">24 Bulan</option>
+                                    <option value="36">36 Bulan</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interestRate">Suku Bunga (% per tahun) *</label>
+                            <input type="number" 
+                                   id="interestRate" 
+                                   class="form-control" 
+                                   placeholder="12.5"
+                                   step="0.1"
+                                   required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="purpose">Tujuan Pinjaman</label>
+                            <textarea id="purpose" 
+                                      class="form-control" 
+                                      placeholder="Masukkan tujuan pinjaman..."
+                                      rows="2"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h4><i class="fas fa-calendar-alt"></i> Jadwal</h4>
+                        <div class="form-group">
+                            <label for="startDate">Tanggal Mulai *</label>
+                            <input type="date" 
+                                   id="startDate" 
+                                   class="form-control" 
+                                   required>
+                        </div>
+                        
+                        <div class="form-info">
+                            <small>
+                                <i class="fas fa-info-circle"></i>
+                                Pembiayaan akan aktif setelah disetujui dan dana dicairkan
+                            </small>
+                        </div>
+                    </div>
+                </form>
+           
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeCreateModal()">
+                    <i class="fas fa-times"></i> Batal
+                </button>
+                <button class="btn-primary" onclick="submitCreatePembiayaan()">
+                    <i class="fas fa-check"></i> Simpan
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- MODAL: Inquiry Pembiayaan -->
+   <!-- MODAL: Inquiry Pembiayaan -->
+<div id="inquiryModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fas fa-search"></i> Cari Data Pembiayaan</h3>
+            <button class="close-modal" onclick="closeInquiryModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="searchNoPembiayaan">Nomor Pembiayaan</label>
+                <div class="input-with-button">
+                    <input type="text" 
+                           id="searchNoPembiayaan" 
+                           class="form-control" 
+                           placeholder="Masukkan nomor pembiayaan (contoh: MJD0000000004)"
+                           onkeypress="if(event.key === 'Enter') searchPembiayaan()">
+                    <button type="button" 
+                            class="btn-secondary small" 
+                            onclick="searchPembiayaan()">
+                        <i class="fas fa-search"></i> Cari
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="inquiryLoading" class="loading-saldo" style="display: none; margin: 20px 0;">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Memuat data pembiayaan...</span>
+            </div>
+            
+            <!-- Result Area -->
+            <div id="inquiryResult" style="display: none;">
+                <div class="transaction-summary" style="margin-top: 20px;">
+                    <h4 style="margin-bottom: 15px;">Detail Pembiayaan</h4>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <span>Nomor Pembiayaan</span>
+                            <strong id="resultNoPembiayaan">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Nasabah</span>
+                            <strong id="resultCustomerName">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Jumlah Pinjaman</span>
+                            <strong id="resultSaldoPokok" class="amount-display">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tenor</span>
+                            <strong id="resultTenor">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Suku Bunga</span>
+                            <strong id="resultInterestRate">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Status</span>
+                            <strong id="resultStatus">-</strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tanggal Mulai</span>
+                            <strong id="resultStartDate">-</strong>
+                        </div>
+                        <!-- <div class="summary-item">
+                            <span>Saldo Pokok</span>
+                            <strong id="resultSaldoPokok">-</strong>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <div class="form-info" style="margin-top: 20px;">
+                    <small>
+                        <i class="fas fa-calendar-check"></i>
+                        <span id="resultNextPayment">Jadwal angsuran akan ditampilkan di sini</span>
+                    </small>
+                </div>
+                
+                <!-- Area untuk tabel cicilan akan ditambahkan secara dinamis -->
+            </div>
+            
+            <!-- Error State -->
+            <div id="inquiryError" class="saldo-error" style="display: none; margin-top: 20px;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Data tidak ditemukan</span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeInquiryModal()">
+                <i class="fas fa-times"></i> Tutup
+            </button>
+            <button class="btn-primary" onclick="generateReport()" id="btnReport" style="display: none;">
+                <i class="fas fa-print"></i> Cetak Laporan
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- MODAL: Simulasi Pembiayaan -->
+    <div id="simulasiModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-calculator"></i> Simulasi Pembiayaan</h3>
+                <button class="close-modal" onclick="closeSimulasiModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="simulasiForm">
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="simulasiAmount">Saldo Awal (Rp) *</label>
+                            <div class="input-with-prefix">
+                                <span class="input-prefix">Rp</span>
+                                <input type="number" 
+                                       id="simulasiAmount" 
+                                       class="form-control" 
+                                       placeholder="10.000.000"
+                                       min="100000"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group half">
+                            <label for="simulasiTenor">Jangka Waktu (Bulan) *</label>
+                            <select id="simulasiTenor" class="form-control" required>
+                                <option value="">Pilih jangka waktu</option>
+                                <option value="3">3 Bulan</option>
+                                <option value="6">6 Bulan</option>
+                                <option value="12">12 Bulan</option>
+                                <option value="18">18 Bulan</option>
+                                <option value="24">24 Bulan</option>
+                                <option value="36">36 Bulan</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="simulasiInterestRate">Bunga Tahunan (%) *</label>
+                            <input type="number" 
+                                   id="simulasiInterestRate" 
+                                   class="form-control" 
+                                   placeholder="10.0"
+                                   step="0.1"
+                                   min="0"
+                                   max="100"
+                                   required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="simulasiStartDate">Tanggal Mulai *</label>
+                            <input type="date" 
+                                   id="simulasiStartDate" 
+                                   class="form-control" 
+                                   required>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="btn-primary" onclick="calculateSimulasi()" style="width: 100%; margin-top: 15px;">
+                        <i class="fas fa-calculator"></i> Hitung Simulasi
+                    </button>
+                </form>
+                
+                <div id="simulasiResult" style="display: none;">
+                    <div class="transaction-summary" style="margin-top: 20px;">
+                        <h4 style="margin-bottom: 15px;">Hasil Simulasi</h4>
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <span>Cicilan per Bulan</span>
+                                <strong id="simCicilanBulan" class="amount-display">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Total Pembayaran</span>
+                                <strong id="simTotalBayar" class="amount-display">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Total Bunga</span>
+                                <strong id="simTotalBunga">-</strong>
+                            </div>
+                            <div class="summary-item">
+                                <span>Jenis Angsuran</span>
+                                <strong id="simJenis">-</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="simulasiTableContainer" style="margin-top: 20px;">
+                        <h5 style="margin-bottom: 10px; color: #2c3e50;">
+                            <i class="fas fa-calendar-alt"></i> Jadwal Angsuran
+                        </h5>
+                        <div id="simulasiTable" style="overflow-x: auto;">
+                            <!-- Table will be generated here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="simulasiError" class="saldo-error" style="display: none; margin-top: 20px;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="simulasiErrorMessage">Gagal menghitung simulasi</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeSimulasiModal()">
+                    <i class="fas fa-times"></i> Tutup
+                </button>
+                <button class="btn-primary" onclick="exportSimulasi()" id="btnExportSimulasi" style="display: none;">
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="nav-header">
+            <div class="nav-user">
+                <div class="nav-user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="nav-user-info">
+                    <strong>Admin Pembiayaan</strong>
+                    <small>Manajemen Pinjaman</small>
+                </div>
+            </div>
+            <button class="close-nav" onclick="toggleNav()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <a href="/adminHome" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard Utama</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="/pembiayaan" class="nav-item active">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Pembiayaan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="#" class="nav-item">
+                <i class="fas fa-users"></i>
+                <span>Nasabah</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="#" class="nav-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Laporan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <div class="nav-divider"></div>
+            
+            <a href="#" class="nav-item">
+                <i class="fas fa-cog"></i>
+                <span>Pengaturan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <a href="#" class="nav-item">
+                <i class="fas fa-question-circle"></i>
+                <span>Bantuan</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            
+            <div class="nav-divider"></div>
+            
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Keluar</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="nav-footer">
+            <p>Danaku App v1.0.0</p>
+            <small>© 2024 All rights reserved</small>
+        </div>
+    </nav>
+
+    <!-- Mobile Footer -->
+    <footer class="mobile-footer">
+        <nav class="footer-nav">
+            <a href="/adminHome" class="footer-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="/pembiayaan" class="footer-nav-item active">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Pembiayaan</span>
+            </a>
+            <a href="#" class="footer-nav-item">
+                <i class="fas fa-chart-pie"></i>
+                <span>Statistik</span>
+            </a>
+            <a href="#" class="footer-nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+    </footer>
+    
+
+    <script src="/js/pembiayaan.js"></script>
+    <!-- Tambahkan ini setelah modal create (optional untuk debug) -->
+<script>
+    // Debug function untuk melihat data yang tersimpan
+    function debugCustomerData() {
+        const customerDataStr = document.getElementById('customerId').dataset.customerData;
+        console.log('Debug - customerData:', customerDataStr);
+        if (customerDataStr) {
+            console.log('Parsed customerData:', JSON.parse(customerDataStr));
+        }
+        alert('Check console for customer data');
+    }
+</script>
+<!-- Di pembiayaan.html, tambahkan sebelum </head> -->
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>
