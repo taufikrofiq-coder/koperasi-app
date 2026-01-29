@@ -24,3 +24,28 @@
 2026-01-29 21:00:08.932 DEBUG 19580 --- [ionShutdownHook] GenericWebApplicationContext             : Closing org.springframework.web.context.support.GenericWebApplicationContext@757529a4, started on Thu Jan 29 20:59:51 WIB 2026
 2026-01-29 21:00:08.954  INFO 19580 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown initiated...
 2026-01-29 21:00:09.844  INFO 19580 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown completed.
+2026-01-29 21:09:51.530  INFO   --- [           main] AnnotationConfigContextLoaderUtils       : Could not detect default configuration classes for test class [com.danaku.danaku.DanakuApplicationTests]: DanakuApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-29 21:09:51.778  INFO   --- [           main] SpringBootTestContextBootstrapper        : Found @SpringBootConfiguration com.danaku.danaku.DanakuApplication for test class com.danaku.danaku.DanakuApplicationTests
+2026-01-29 21:09:52.560  INFO 22724 --- [           main] DanakuApplicationTests                   : Starting DanakuApplicationTests using Java 21.0.9 with PID 22724 (started by Lenovo in D:\data Taufik\coba koperasi)
+2026-01-29 21:09:52.561  INFO 22724 --- [           main] DanakuApplicationTests                   : No active profile set, falling back to 1 default profile: "default"
+2026-01-29 21:09:52.618 DEBUG 22724 --- [           main] GenericWebApplicationContext             : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73d69c0f
+2026-01-29 21:09:55.499  INFO 22724 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29 21:09:55.648  INFO 22724 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-29 21:09:55.675  WARN 22724 --- [           main] deprecation                              : HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2026-01-29 21:09:55.744  INFO 22724 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
+2026-01-29 21:09:56.382  INFO 22724 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
+2026-01-29 21:09:59.206  INFO 22724 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@1073c664
+2026-01-29 21:09:59.209  INFO 22724 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
+2026-01-29 21:10:01.921  INFO 22724 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29 21:10:02.813  INFO 22724 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
+2026-01-29 21:10:02.819  INFO 22724 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
+2026-01-29 21:10:03.794  INFO 22724 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
+2026-01-29 21:10:05.657  WARN 22724 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-29 21:10:06.034 DEBUG 22724 --- [           main] RequestMappingHandlerMapping             : 36 mappings in 'requestMappingHandlerMapping'
+2026-01-29 21:10:06.280 DEBUG 22724 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-29 21:10:06.739 DEBUG 22724 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-29 21:10:06.812 DEBUG 22724 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-29 21:10:07.096  INFO 22724 --- [           main] DanakuApplicationTests                   : Started DanakuApplicationTests in 15.001 seconds (process running for 17.336)
+2026-01-29 21:10:08.482 DEBUG 22724 --- [ionShutdownHook] GenericWebApplicationContext             : Closing org.springframework.web.context.support.GenericWebApplicationContext@73d69c0f, started on Thu Jan 29 21:09:52 WIB 2026
+2026-01-29 21:10:08.518  INFO 22724 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown initiated...
+2026-01-29 21:10:09.435  INFO 22724 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown completed.
