@@ -1,73 +1,26 @@
-2026-01-27 14:50:58.602  INFO   --- [           main] AnnotationConfigContextLoaderUtils       : Could not detect default configuration classes for test class [com.danaku.danaku.DanakuApplicationTests]: DanakuApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-27 14:50:59.030  INFO   --- [           main] SpringBootTestContextBootstrapper        : Found @SpringBootConfiguration com.danaku.danaku.DanakuApplication for test class com.danaku.danaku.DanakuApplicationTests
-2026-01-27 14:50:59.587  INFO 2876 --- [           main] DanakuApplicationTests                   : Starting DanakuApplicationTests using Java 17.0.9 with PID 2876 (started by 20070114 in D:\projectku\danaku)
-2026-01-27 14:50:59.603  INFO 2876 --- [           main] DanakuApplicationTests                   : No active profile set, falling back to 1 default profile: "default"
-2026-01-27 14:50:59.652 DEBUG 2876 --- [           main] GenericWebApplicationContext             : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3c5a54b7
-2026-01-27 14:51:02.215  INFO 2876 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-27 14:51:02.296  INFO 2876 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-01-27 14:51:02.356  INFO 2876 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
-2026-01-27 14:51:02.900  INFO 2876 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
-2026-01-27 14:51:03.260  INFO 2876 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@6ace919c
-2026-01-27 14:51:03.262  INFO 2876 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
-2026-01-27 14:51:05.837  INFO 2876 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-27 14:51:05.969  INFO 2876 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
-2026-01-27 14:51:05.982  INFO 2876 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
-2026-01-27 14:51:06.868  INFO 2876 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
-2026-01-27 14:51:08.923  WARN 2876 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-27 14:51:09.441 DEBUG 2876 --- [           main] RequestMappingHandlerMapping             : 36 mappings in 'requestMappingHandlerMapping'
-2026-01-27 14:51:09.719 DEBUG 2876 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-01-27 14:51:09.776  INFO 2876 --- [           main] DefaultSecurityFilterChain               : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f0b02a3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d3a3738, org.springframework.security.web.context.SecurityContextHolderFilter@2aa143ba, org.springframework.security.web.header.HeaderWriterFilter@f2bec99, org.springframework.web.filter.CorsFilter@4ba056ab, org.springframework.security.web.authentication.logout.LogoutFilter@299003eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@372dc92e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a885aa1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e530f34, org.springframework.security.web.access.ExceptionTranslationFilter@635791b7, org.springframework.security.web.access.intercept.AuthorizationFilter@8ff4795]
-2026-01-27 14:51:10.165 DEBUG 2876 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-01-27 14:51:10.237 DEBUG 2876 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-01-27 14:51:10.571  INFO 2876 --- [           main] DanakuApplicationTests                   : Started DanakuApplicationTests in 11.291 seconds (process running for 13.398)
-2026-01-27 14:51:12.183 DEBUG 2876 --- [ionShutdownHook] GenericWebApplicationContext             : Closing org.springframework.web.context.support.GenericWebApplicationContext@3c5a54b7, started on Tue Jan 27 14:50:59 WIB 2026
-2026-01-27 14:51:12.205  INFO 2876 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown initiated...
-2026-01-27 14:51:12.217  INFO 2876 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown completed.
-2026-01-27 22:37:19.314  INFO   --- [           main] AnnotationConfigContextLoaderUtils       : Could not detect default configuration classes for test class [com.danaku.danaku.DanakuApplicationTests]: DanakuApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-27 22:37:19.568  INFO   --- [           main] SpringBootTestContextBootstrapper        : Found @SpringBootConfiguration com.danaku.danaku.DanakuApplication for test class com.danaku.danaku.DanakuApplicationTests
-2026-01-27 22:37:20.453  INFO 18688 --- [           main] DanakuApplicationTests                   : Starting DanakuApplicationTests using Java 21.0.9 with PID 18688 (started by Lenovo in D:\data Taufik\coba koperasi)
-2026-01-27 22:37:20.455  INFO 18688 --- [           main] DanakuApplicationTests                   : No active profile set, falling back to 1 default profile: "default"
-2026-01-27 22:37:20.514 DEBUG 18688 --- [           main] GenericWebApplicationContext             : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73d69c0f
-2026-01-27 22:37:23.311  INFO 18688 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-27 22:37:23.444  INFO 18688 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-01-27 22:37:23.612  INFO 18688 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
-2026-01-27 22:37:24.560  INFO 18688 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
-2026-01-27 22:37:24.976  INFO 18688 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@352e5a82
-2026-01-27 22:37:24.980  INFO 18688 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
-2026-01-27 22:37:26.847  INFO 18688 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-27 22:37:26.974  INFO 18688 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
-2026-01-27 22:37:26.980  INFO 18688 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
-2026-01-27 22:37:27.640  INFO 18688 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
-2026-01-27 22:37:29.211  WARN 18688 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-27 22:37:29.619 DEBUG 18688 --- [           main] RequestMappingHandlerMapping             : 36 mappings in 'requestMappingHandlerMapping'
-2026-01-27 22:37:29.887 DEBUG 18688 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-01-27 22:37:30.399 DEBUG 18688 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-01-27 22:37:30.469 DEBUG 18688 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-01-27 22:37:30.773  INFO 18688 --- [           main] DanakuApplicationTests                   : Started DanakuApplicationTests in 10.842 seconds (process running for 13.255)
-2026-01-27 22:37:31.818 DEBUG 18688 --- [ionShutdownHook] GenericWebApplicationContext             : Closing org.springframework.web.context.support.GenericWebApplicationContext@73d69c0f, started on Tue Jan 27 22:37:20 WIB 2026
-2026-01-27 22:37:31.838  INFO 18688 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown initiated...
-2026-01-27 22:37:31.854  INFO 18688 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown completed.
-2026-01-27 23:22:08.382  INFO   --- [           main] AnnotationConfigContextLoaderUtils       : Could not detect default configuration classes for test class [com.danaku.danaku.DanakuApplicationTests]: DanakuApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-01-27 23:22:08.592  INFO   --- [           main] SpringBootTestContextBootstrapper        : Found @SpringBootConfiguration com.danaku.danaku.DanakuApplication for test class com.danaku.danaku.DanakuApplicationTests
-2026-01-27 23:22:09.552  INFO 10660 --- [           main] DanakuApplicationTests                   : Starting DanakuApplicationTests using Java 21.0.9 with PID 10660 (started by Lenovo in D:\data Taufik\coba koperasi)
-2026-01-27 23:22:09.554  INFO 10660 --- [           main] DanakuApplicationTests                   : No active profile set, falling back to 1 default profile: "default"
-2026-01-27 23:22:09.615 DEBUG 10660 --- [           main] GenericWebApplicationContext             : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@73d69c0f
-2026-01-27 23:22:12.449  INFO 10660 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-27 23:22:12.578  INFO 10660 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
-2026-01-27 23:22:12.670  INFO 10660 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
-2026-01-27 23:22:13.211  INFO 10660 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
-2026-01-27 23:22:13.634  INFO 10660 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@27502e5c
-2026-01-27 23:22:13.638  INFO 10660 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
-2026-01-27 23:22:15.695  INFO 10660 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-27 23:22:15.819  INFO 10660 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
-2026-01-27 23:22:15.825  INFO 10660 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
-2026-01-27 23:22:16.527  INFO 10660 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
-2026-01-27 23:22:18.273  WARN 10660 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-01-27 23:22:18.646 DEBUG 10660 --- [           main] RequestMappingHandlerMapping             : 36 mappings in 'requestMappingHandlerMapping'
-2026-01-27 23:22:18.867 DEBUG 10660 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-01-27 23:22:19.409 DEBUG 10660 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-01-27 23:22:19.489 DEBUG 10660 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-01-27 23:22:19.783  INFO 10660 --- [           main] DanakuApplicationTests                   : Started DanakuApplicationTests in 10.886 seconds (process running for 13.298)
-2026-01-27 23:22:20.773 DEBUG 10660 --- [ionShutdownHook] GenericWebApplicationContext             : Closing org.springframework.web.context.support.GenericWebApplicationContext@73d69c0f, started on Tue Jan 27 23:22:09 WIB 2026
-2026-01-27 23:22:20.790  INFO 10660 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown initiated...
-2026-01-27 23:22:20.815  INFO 10660 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown completed.
+2026-01-29 20:59:50.171  INFO   --- [           main] AnnotationConfigContextLoaderUtils       : Could not detect default configuration classes for test class [com.danaku.danaku.DanakuApplicationTests]: DanakuApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-29 20:59:50.483  INFO   --- [           main] SpringBootTestContextBootstrapper        : Found @SpringBootConfiguration com.danaku.danaku.DanakuApplication for test class com.danaku.danaku.DanakuApplicationTests
+2026-01-29 20:59:51.293  INFO 19580 --- [           main] DanakuApplicationTests                   : Starting DanakuApplicationTests using Java 21.0.9 with PID 19580 (started by Lenovo in D:\data Taufik\coba koperasi)
+2026-01-29 20:59:51.296  INFO 19580 --- [           main] DanakuApplicationTests                   : No active profile set, falling back to 1 default profile: "default"
+2026-01-29 20:59:51.363 DEBUG 19580 --- [           main] GenericWebApplicationContext             : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@757529a4
+2026-01-29 20:59:54.712  INFO 19580 --- [           main] LogHelper                                : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-29 20:59:54.880  INFO 19580 --- [           main] Version                                  : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-01-29 20:59:54.983  INFO 19580 --- [           main] RegionFactoryInitiator                   : HHH000026: Second-level cache disabled
+2026-01-29 20:59:55.689  INFO 19580 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Starting...
+2026-01-29 20:59:58.727  INFO 19580 --- [           main] HikariPool                               : SpringBootJPAHikariCP - Added connection org.postgresql.jdbc.PgConnection@6e7e0259
+2026-01-29 20:59:58.730  INFO 19580 --- [           main] HikariDataSource                         : SpringBootJPAHikariCP - Start completed.
+2026-01-29 21:00:01.396  INFO 19580 --- [           main] JtaPlatformInitiator                     : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-29 21:00:03.598  WARN 19580 --- [           main] SqlExceptionHelper                       : SQL Warning Code: 0, SQLState: 00000
+2026-01-29 21:00:03.599  WARN 19580 --- [           main] SqlExceptionHelper                       : constraint "uk_k8d0f2n7n88w1a16yhua64onx" of relation "users" does not exist, skipping
+2026-01-29 21:00:03.826  INFO 19580 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] Initializing JwtTokenProvider
+2026-01-29 21:00:03.833  INFO 19580 --- [           main] JwtTokenProvider                         : [JWT-PROVIDER] JwtTokenProvider initialized successfully
+2026-01-29 21:00:04.526  INFO 19580 --- [           main] JwtAuthenticationFilter                  : [JWT-FILTER] ✅ JwtAuthenticationFilter initialized
+2026-01-29 21:00:06.242  WARN 19580 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-29 21:00:06.664 DEBUG 19580 --- [           main] RequestMappingHandlerMapping             : 36 mappings in 'requestMappingHandlerMapping'
+2026-01-29 21:00:06.958 DEBUG 19580 --- [           main] SimpleUrlHandlerMapping                  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-01-29 21:00:07.447 DEBUG 19580 --- [           main] RequestMappingHandlerAdapter             : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-01-29 21:00:07.526 DEBUG 19580 --- [           main] ExceptionHandlerExceptionResolver        : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-01-29 21:00:07.819  INFO 19580 --- [           main] DanakuApplicationTests                   : Started DanakuApplicationTests in 16.974 seconds (process running for 19.475)
+2026-01-29 21:00:08.932 DEBUG 19580 --- [ionShutdownHook] GenericWebApplicationContext             : Closing org.springframework.web.context.support.GenericWebApplicationContext@757529a4, started on Thu Jan 29 20:59:51 WIB 2026
+2026-01-29 21:00:08.954  INFO 19580 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown initiated...
+2026-01-29 21:00:09.844  INFO 19580 --- [ionShutdownHook] HikariDataSource                         : SpringBootJPAHikariCP - Shutdown completed.
